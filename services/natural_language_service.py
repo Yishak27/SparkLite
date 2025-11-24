@@ -8,5 +8,21 @@ class NaturalLanguageQuery:
             st.session_state.chat_messages = []
     
     def display_chat_interface(self):
-        st.subheader("Ask Questions About Your Data")             
+        st.subheader("Ask Questions About Your Data")     
+        for message in st.session_state.chat_messages:
+            with st.chat_message(message["role"]):
+                st.write(message["content"])
     
+    def get_user_query(self):
+        user_query = st.chat_input("Ask a question about your data...")        
+        if user_query:
+            st.session_state.chat_messages.append({"role": "user", "content": user_query})
+            with st.chat_message("user"):
+                st.write(user_query)            
+            return user_query
+        return None
+    
+    def add_assistant_response(self, response):
+        st.session_state.chat_messages.append({"role": "assistant", "content": response})        
+        with st.chat_message("assistant"):
+            st.write(response)

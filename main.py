@@ -78,6 +78,12 @@ if uploaded_file is not None:
 if st.session_state.uploaded_data is not None:
     query_interface = NaturalLanguageQuery() 
     query_interface.display_chat_interface()
+    user_query = query_interface.get_user_query()
     
+    if user_query:
+        with st.chat_message("assistant"):
+            with st.spinner("Analyzing your question..."):
+                placeholder_response = "AI response for the give question will be done here...."
+                query_interface.add_assistant_response(placeholder_response)
 else:
     st.info("Please upload a data file first to start asking questions.")
