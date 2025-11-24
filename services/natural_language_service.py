@@ -1,10 +1,21 @@
 import os
 import streamlit as st
 import pandas as pd
+import openai
+from dotenv import load_dotenv
 from .code_generator import CodeGenerator
 
+load_dotenv()
+OPEN_API_KEY = os.getenv("OPEN_AI_KEY")
+GROK_API_KEY = os.getenv("GROK_API_KEY")
+print('open key',OPEN_API_KEY, GROK_API_KEY)
 class NaturalLanguageQuery:  
     def __init__(self):
+        # self.client = openai.OpenAI(api_key=OPEN_API_KEY)
+        self.client = openai.OpenAI(
+            base_url="https://api.groq.com/openai/v1",
+            api_key=GROK_API_KEY
+        )
         if 'chat_messages' not in st.session_state:
             st.session_state.chat_messages = []
     
@@ -17,13 +28,12 @@ class NaturalLanguageQuery:
     def process_user_request(self, user_query,df):
         try:
             code_generation = CodeGenerator
-
-            with st.spinner("generating analysis code"):
-                generated = code_generation.generate_code(self,user_query,df)
-                print("generated", generated)
-            with st.expander:
-                st.code(generated)
-            return 
+            # with st.spinner("generating analysis code"):
+            generated = code_generation.generate_code(self,user_query,df)
+            print("generated", generated)
+            with st.expander("View Generated Code"):
+                st.code(generated, language="python")
+            return generated
         except Exception as e:
             print("error occur",e)
 
