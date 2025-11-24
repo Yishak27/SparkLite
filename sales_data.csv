@@ -1,0 +1,1001 @@
+id,region,sales_person,product,quantity,unit_price,total_price
+1,MH-ARN,Klaus Levington,Vegan chocolate chip cookies,87,4.79,416.73
+2,US-WI,Guillemette Codi,Deep Tissue Massage Gun,4,89.99,359.96
+3,ET-TI,Noam Durden,Grass Fed Beef Patties,84,9.99,839.16
+4,KZ-PAV,Benjy Vanyukhin,Chipotle Sauce,31,3.29,101.99
+5,PG-CPM,Laraine Deeley,Nail Polish Set,91,25,2275
+6,SN-TC,Elmore Hun,Coloring Books for Adults,49,14.99,734.51
+7,US-MI,Bevan Le Surf,Stainless Steel Mixing Bowls,72,29.99,2159.28
+8,BR-AM,Melody Gentiry,Sous Vide Cooker,85,79.99,6799.15
+9,FJ-W,Meryl Pyner,Portable Electric Fan,62,24.99,1549.38
+10,CA-NT,Florella Cheers,Adjustable Garden Rake,4,22.99,91.96
+11,CA-MB,Lorena Keigher,Insulated Sport Tumbler,83,22.99,1908.17
+12,ID-LA,Jacquelynn Catteroll,Plaid Flannel Shirt,54,29.99,1619.46
+13,SB-ML,Jacqui Wickenden,Fruit and Nut Medley,64,5.99,383.36
+14,RE-U-A,Avivah Berrygun,Eggs (dozen),39,2.99,116.61
+15,US-NE,Livvyy Franseco,Multi-Function Meat Tenderizer,90,19.99,1799.1
+16,HN-OL,Meredeth Debrick,Cheddar & Bacon Potato Skins,99,7.49,741.51
+17,PG-SAN,Sebastian Tomisch,Quinoa and Kale Salad Kit,25,5.29,132.25
+18,CA-BC,Amity Loughran,Almond Joy Snack Bars,30,2.99,89.7
+19,BR-RS,Bibbye Churcher,Electric Wine Opener,31,29.99,929.69
+20,GN-B,Georgie Duthie,Reclining Camping Chair,24,49.99,1199.76
+21,SE-Z,Orelia Losselyong,Cushion Covers,12,35,420
+22,DE-HE,Opaline Brigman,Ginger Tea,94,4.99,469.06
+23,NC-U-A,Frants Mosen,Tropical Fruit Bowl,34,4.99,169.66
+24,US-CO,Kellina Menichelli,Mobile Workbench,12,199.99,2399.88
+25,US-MI,Gearalt Ableson,Honey Butter Popcorn,14,2.99,41.86
+26,US-MI,Tricia Vittet,Basketball,43,29.99,1289.57
+27,US-NM,Chen Maffei,Pasta (Fusilli),53,1.79,94.87
+28,AR-B,Rodolph Gadson,Sports Water Bottle with Infuser,95,19.99,1899.05
+29,KR-11,Finley Rigard,Eco-Friendly Notepad,4,8.99,35.96
+30,CU-10,Corinne Druhan,Peach Halves (canned),2,2.49,4.98
+31,PK-BA,Ingaberg Ridolfi,Peach Fruit Cups,36,1.99,71.64
+32,FR-F,Job Burr,Kale Salad Kit,98,4.99,489.02
+33,RU-UD,Yorke Cashell,Cotton Tote Bag Set,43,29.99,1289.57
+34,CN-35,Yuma Cantera,Herb Seasoned Croutons,55,2.99,164.45
+35,AU-NSW,Wolf Jarrett,Motion Sensor Light,67,19.99,1339.33
+36,US-WI,Wilone Caile,Insulated Sport Tumbler,39,22.99,896.61
+37,US-KY,Doris Carlone,Cheesy Cauliflower Bake,61,5.49,334.89
+38,AU-NSW,Terrel Jochen,Scented Candle Set,35,24.99,874.65
+39,BZ-TOL,Corabelle Kibble,Pressure Cooker,70,89,6230
+40,US-GA,Cammy Mullin,Basil Lemonade,70,2.99,209.3
+41,CA-AB,Meara Joss,Natural Soy Candles,69,19.99,1379.31
+42,KH-16,Rafa Landsbury,Protein Pancake Mix,61,3.99,243.39
+43,EC-M,Francklin Canwell,Italian Pasta,100,2.29,229
+44,BB-01,Hermann Tonbye,Quality Chef Apron,67,19.99,1339.33
+45,CM-OU,Deb Bleasdale,Dill Pickle Chips,77,2.29,176.33
+46,BR-MT,Bobbie Chomiszewski,Set of Silicone Cooking Utensils,75,29.99,2249.25
+47,IE-D,Tabatha Bradnock,Vegetable Curry,99,5.99,593.01
+48,US-CA,Candi Lyne,Free-Range Eggs,59,3.99,235.41
+49,US-OK,Pascale Acarson,DIY Organic Gardening Kit,76,39.99,3039.24
+50,MY-10,Auguste Rabbe,Honey-Balsamic Vinaigrette,2,3.39,6.78
+51,BR-SP,Irina Ingon,Thai Peanut Dressing,66,3.29,217.14
+52,IN-MM,Edithe Chason,Organic Coconut Flakes,70,3.49,244.3
+53,US-TN,Cletis Renfrew,Coconut Macaroons,89,4.99,444.11
+54,CN-45,Deloria Sign,Cat Tree with Scratching Posts,81,79.99,6479.19
+55,US-MA,Say Doelle,Canvas Wall Art,24,39.99,959.76
+56,KI-G,Therese Ferreri,Portable Pet Bathing Tool,66,29.99,1979.34
+57,US-ME,Shurlock Aucott,Car Phone Mount,51,15.99,815.49
+58,SR-MA,Floria Kellar,Silicone Wine Glasses,10,22.99,229.9
+59,US-FL,Ephraim Ohrt,Digital Meat Thermometer,77,24.99,1924.23
+60,US-NV,Jacquenetta De Courtney,Camera Lens Cleaning Kit,92,14.99,1379.08
+61,MX-CHH,Sean Austwick,Coconut Bowls Set,40,22.99,919.6
+62,CL-CO,Nadiya Tribell,Mango Chunks,45,4.89,220.05
+63,UY-AR,Banky Croydon,Kids' STEM Robotics Kit,20,59.99,1199.8
+64,CN-35,Chiquita Bickley,Foot Spa Bath Massager,94,59.99,5639.06
+65,US-AK,Glendon Woolcocks,Compact Digital Camera,1,249.99,249.99
+66,VI-U-A,Sherwin Swaile,Electric Food Slicer,72,99.99,7199.28
+67,US-MO,Flin Valeri,Caraway Rye Bread,5,4.79,23.95
+68,MG-A,Pierson Mattiussi,Herb Seasoned Rice,48,2.99,143.52
+69,ES-CT,Balduin Ricoald,Pet Travel Backpack Carrier,83,49.99,4149.17
+70,CU-13,Ambur Piggrem,Stylish Wireless Earbuds,93,59.99,5579.07
+71,CN-31,Rayna Forrester,Smartphone Stand,82,15.49,1270.18
+72,VE-F,Winny Sterzaker,Cheddar Cheese Slices,29,3.49,101.21
+73,SA-04,Kristin Cowthart,Outdoor Sports Backpack,28,49.99,1399.72
+74,CA-ON,Caitrin Kienlein,Adjustable Garden Rake,54,22.99,1241.46
+75,US-TX,Bradan Noteyoung,Teriyaki Chicken Bowl,38,6.49,246.62
+76,MY-12,Alanna Featherstonhaugh,Digital Food Scale,4,22.99,91.96
+77,BR-MA,Algernon McMurraya,Foot Spa Bath Massager,81,59.99,4859.19
+78,US-NY,Michael Cresswell,Travel Mug with Leak-Proof Lid,67,24.99,1674.33
+79,GA-4,Inness Blackford,Fall-Themed Table Runner,34,19.99,679.66
+80,CA-NU,Basilius Conibear,Natural Soy Candles,68,19.99,1359.32
+81,IR-06,Adriana Scatchard,Organic Whole Grain Oats,42,2.49,104.58
+82,US-KY,Rochester Husher,Herbal Tea Set,38,19.99,759.62
+83,VE-B,Donavon Guslon,Spicy Vegetable Sushi Rolls,71,8.49,602.79
+84,IR-10,Amandy Thornber,Woven Storage Baskets,8,24.99,199.92
+85,MG-M,Gerek Milligan,Glass Tea Pot,58,34.99,2029.42
+86,CN-65,Danyette Goodsall,Car Phone Mount,22,15.99,351.78
+87,US-NC,Shamus Farlane,Nutty Trail Mix,87,4.29,373.23
+88,VE-V,Nert Morales,Deluxe First Aid Kit,72,39.99,2879.28
+89,NC-U-A,Jerrilee Kinman,Herbal Tea Sampler Box,41,29.99,1229.59
+90,AU-QLD,Titus Knibbs,Travel Luggage Scale,56,14.99,839.44
+91,IT-72,Meghan Duffitt,Bamboo Memory Foam Pillow,82,34.99,2869.18
+92,CD-SK,Edy McConway,Tomatillo Salsa,18,3.29,59.22
+93,US-IA,Eziechiele Budnk,Honey Wheat Pretzels,56,3.49,195.44
+94,BR-AM,Meg Minucci,Peach Green Tea,18,3.49,62.82
+95,FR-P,Zorah Pifford,Kale & Quinoa Salad Mix,79,4.49,354.71
+96,CA-MB,Frederica Breinl,Jigsaw Puzzle,18,14.99,269.82
+97,KW-FA,Carline Windrus,Pet Leash,82,15.99,1311.18
+98,US-FL,Corie Witard,Honey BBQ Ribs,85,12.99,1104.15
+99,US-AK,Sharl Warrack,Solar Charger,51,39.99,2039.49
+100,AU-QLD,Willi Ganders,Portable Jump Starter,20,59.99,1199.8
+101,NA-CA,Hale Bartlet,Chewy Granola Bars,77,3.49,268.73
+102,US-NC,Crawford Parley,Plant-Based Protein Bars,58,19.99,1159.42
+103,ID-PA,Gretna Malloch,Ethical Wool Scarf,27,29.99,809.73
+104,RU-KYA,Coletta Muller,Beef Chili,77,4.5,346.5
+105,US-FL,Angelina Paulillo,Savory Oatmeal,35,2.49,87.15
+106,FR-U,Frederigo Kiera,Decorative Throw Blanket,96,39.99,3839.04
+107,VI-U-A,Yuri Elsy,Cocoa Powder,74,3.99,295.26
+108,PF-U-A,Lothario Frazer,Digital Bullet Journal,49,24.99,1224.51
+109,PG-SAN,Cordelia Teek,Mediterranean Couscous,65,3.59,233.35
+110,BR-BA,Olivero De Leek,Caramelized Onion Dip,56,3.99,223.44
+111,SL-S,Jennee Clausen-Thue,Teriyaki Sauce,26,2.99,77.74
+112,MG-D,Roxy Lockhart,Wall Calendar,100,17.99,1799
+113,PA-5,Hatti Burbudge,Organic Brown Sugar,58,2.49,144.42
+114,PG-NSB,Dayle Wybrow,Instant Pot,38,89.99,3419.62
+115,NP-JA,Chaddie Folkes,Spinach Artichoke Dip,25,4.99,124.75
+116,US-NM,Frasquito Leindecker,Digital Wireless Meat Thermometer,61,39.99,2439.39
+117,US-AK,Shaylyn Stittle,Inflatable Party Cooler,48,19.99,959.52
+118,PG-MPM,Merline Scates,Handheld Vacuum,50,79.99,3999.5
+119,BR-AM,Ardath Matthiesen,Stainless Steel Cutlery Set,82,29.99,2459.18
+120,IN-AP,Reggie Leverton,Apple Cinnamon Instant Oatmeal,79,3.49,275.71
+121,CN-42,Cacilia Defont,Eco-Friendly Notepad,22,8.99,197.78
+122,PG-SHM,Davin Abrahamsohn,Dog Waste Bag Dispenser,38,6.99,265.62
+123,DO-20,Cletus Sodor,Electric Pressure Washer,47,199.99,9399.53
+124,AU-QLD,Madeline Snassell,Car Vacuum Cleaner,66,39.99,2639.34
+125,BE-WLG,Gerri Jebb,Cotton Sweatpants,97,29.99,2909.03
+126,US-OH,Riki Rigbye,Frozen Vegetarian Pizza,32,6.49,207.68
+127,CA-SK,Brynna Thurlbourne,Athletic Compression Tights,35,39.99,1399.65
+128,US-AZ,Wernher Neicho,Cranberry Almond Granola,16,4.29,68.64
+129,TR-16,Pearle Deluze,Graphic Hoodie,64,49.99,3199.36
+130,CA-YT,Dolly Tonkinson,Chickpea Salad Deluxe,83,4.29,356.07
+131,TH-86,Dagny Fannon,Spicy Tuna Sushi Kit,65,8.99,584.35
+132,JP-15,Dasi Siddele,Dill Pickle Chips,89,2.29,203.81
+133,GL-U-A,Davie Chevin,Wireless Charger Stand,55,24.99,1374.45
+134,VU-TAE,Collie Jull,Creamy Avocado Dip,99,3.49,345.51
+135,KR-49,Marsha Masserel,Cream Cheese,34,2.69,91.46
+136,US-WY,Bettine Hillin,Thai Basil Fried Rice,3,5.99,17.97
+137,US-CA,Kipp Garz,Striped Long Sleeve Shirt,63,29.99,1889.37
+138,US-AK,Vitoria Morillas,Car Emergency Kit,66,49.99,3299.34
+139,IL-Z,Zolly Velti,Honey Ginger Tea,39,2.99,116.61
+140,CA-NL,Gusty McCormick,Men's Waterproof Hiking Boots,36,89.99,3239.64
+141,PG-SHM,Darcee Keune,Portable Camping Shower,50,39.99,1999.5
+142,CN-35,Nathanil McElroy,Organic Quinoa,91,4.29,390.39
+143,US-FL,Suzanne Klimshuk,Brazil Nuts,58,10.99,637.42
+144,BR-MT,Marj Whieldon,Winter Insulated Jacket,1,89.99,89.99
+145,ID-JT,Shep Malkinson,Stuffed Peppers with Quinoa,59,7.99,471.41
+146,PA-8,Phillipp Imlach,Spicy Snack Mix,64,4.99,319.36
+147,US-AK,Elia Belle,Graphic Tee,45,19.99,899.55
+148,BR-SC,Calvin Grzegorecki,Weighted Blanket,4,79.99,319.96
+149,AU-VIC,Cristiano Possa,Nutty Trail Mix,28,4.29,120.12
+150,VN-U-A,Shayne Dupey,Greek Yogurt,7,1.99,13.93
+151,US-CO,Laurene Aldiss,Chili Lime Seasoning,40,2.99,119.6
+152,GB-ENG,Colly Davoren,LED Table Lamp,23,29.99,689.77
+153,ID-SN,Jayme Longmate,Automatic Pet Feeder,100,69.99,6999
+154,AU-NT,Mikkel Winmill,Photo Album,95,24.99,2374.05
+155,TR-47,Reese Killelea,Cranberry Orange Juice,12,2.49,29.88
+156,US-AK,Ginnie Trunkfield,Spicy Italian Sausage,5,4.99,24.95
+157,TN-82,Jolynn Muncie,Children's Art Set,13,34.99,454.87
+158,CA-NB,Roxanne Richardsson,Smartwatch,19,199.99,3799.81
+159,HT-OU,Annabal Wetheril,Children's Educational Puzzle,49,19.99,979.51
+160,PK-BA,Robinetta Lees,Solar Charger,72,39.99,2879.28
+161,US-HI,Emmie Stearn,Ethical Wool Scarf,33,29.99,989.67
+162,CO-SAP,Petronia Lints,Garden Tool Set with Carrying Bag,81,39.99,3239.19
+163,US-OR,Doralyn Ditty,Wireless Keyboard and Mouse Combo,25,34.99,874.75
+164,FR-E,Tonie Hutten,Spaghetti Sauce,30,2.99,89.7
+165,GA-7,Noel Lacroix,Herbed Goat Cheese,98,5.49,538.02
+166,DJ-TA,Desdemona Meininking,Basic V-Neck T-Shirt,15,19.99,299.85
+167,TH-53,Garv Mylechreest,Two-Tier Fruit Basket,52,29.99,1559.48
+168,EG-ASN,Bengt Costin,Chocolate Chip Cookie Dough,84,5.49,461.16
+169,RU-BRY,Hamish Showl,Cranberry Almond Biscotti,2,4.19,8.38
+170,US-MO,Odie Allso,Garlic Naan Bread,12,3.99,47.88
+171,MV-01,Audi Rulton,Organic Tomato Ketchup,52,3.49,181.48
+172,PE-PIU,Farrah O' Mullan,Gaming Mousepad,10,19.99,199.9
+173,GB-ENG,Janina Gencke,Interactive Plush Toy,93,34.99,3254.07
+174,BZ-CZL,Xylia Bryson,Mini Electric Kettle,89,29.99,2669.11
+175,GB-ENG,Minny Baumann,Dill Pickle Chips,69,2.29,158.01
+176,BA-BIH,Shea Battershall,Jennifer's Amazing Lip Balm Kit,23,22.99,528.77
+177,LK-2,Rudie Tort,Vegetable Spring Rolls,74,6.49,480.26
+178,BR-SC,Geoffry Linstead,Black Olives,91,1.99,181.09
+179,CA-NS,Dominik Dines,Stainless Steel BBQ Grill Set,89,49.99,4449.11
+180,AU-NT,Gregorio Applin,Fresh Basil Pesto,98,4.79,469.42
+181,US-FL,Laney Andreopolos,Smart Light Switch,98,29.99,2939.02
+182,PG-WPD,Kinna O'Lagene,Savory Rice Cakes,7,2.5,17.5
+183,ID-PA,Valery Suter,Golf Putting Green,100,79.99,7999
+184,AU-QLD,Lolly Bernholt,Eco-Friendly Yoga Mat,41,39.99,1639.59
+185,VN-44,Gavrielle Milesop,Frozen Hash Browns,35,2.99,104.65
+186,MZ-G,Shay Gooderick,Grapes (red),13,3.49,45.37
+187,CO-AMA,Fionnula Furness,Blackberry Jam,99,4.29,424.71
+188,PG-SAN,Dannie Ecles,Bamboo Utensil Holder,4,14.99,59.96
+189,US-NV,Kayla Ryam,Silicone Baking Cups,61,10.99,670.39
+190,CA-NT,Shawna Noraway,Italian Pasta,79,2.29,180.91
+191,SE-M,Kenna Hubbucks,Pumpkin Spice Creamer,76,3.79,288.04
+192,CR-P,Paulo Dymidowicz,Thyme,52,2.49,129.48
+193,AU-NSW,Wanids Mellor,Beef Stew Meat,95,5.99,569.05
+194,BR-MG,Rosalyn Brogi,Spicy Thai Coconut Soup,41,3.99,163.59
+195,US-NM,Gigi Shimony,Travel Orthopedic Pillow,21,24.99,524.79
+196,WS-AA,Tarra Mathys,Stainless Steel BBQ Grill Set,48,49.99,2399.52
+197,RU-SA,Darrin Yushkin,Honey Roasted Chickpeas,22,3.29,72.38
+198,BY-HR,Nikki MacCaughan,Cauliflower Crust Pizza,76,7.99,607.24
+199,US-AK,Rosie Plaistowe,Mango Chutney,62,3.99,247.38
+200,AF-HEL,Fanchon Edgecumbe,Vegetarian Stir Fry Sauce,26,2.49,64.74
+201,BR-PR,Selig Seery,Kids' Outdoor Explorer Kit,39,24.99,974.61
+202,CO-CES,Neda Wicks,Spicy Snack Mix,35,4.99,174.65
+203,AR-D,Niels Mandifield,Sporty Slide Sandals,66,24.99,1649.34
+204,KH-7,Suki Dangerfield,Kale & Quinoa Salad Mix,77,4.49,345.73
+205,BW-SO,Cyril Damarell,Caribbean Jerk Marinade,46,3.79,174.34
+206,PK-BA,Mandel Izon,Smartphone Photography Ring Light,45,29.99,1349.55
+207,CA-YT,Henri Fredi,Classic Bagels,3,2.99,8.97
+208,BR-AM,Hester McLaughlan,Belted Trench Coat,8,89.99,719.92
+209,AU-NT,Andreas Strangeway,Outdoor Sports Backpack,62,49.99,3099.38
+210,AU-VIC,Shoshanna Bernath,Fresh Strawberries,100,3.99,399
+211,GQ-WN,Darcie Blakesley,Vegetable Curry,2,5.99,11.98
+212,GB-NIR,Carleton Loosley,Air Mattress,93,49.99,4649.07
+213,MG-M,Lilli Vischi,Mango Salsa,9,3.49,31.41
+214,US-OK,Devin Fitzsimon,Diced Tomatoes (canned),86,1.49,128.14
+215,GB-ENG,Magdaia D'Antonio,Buffalo Cauliflower Bites,29,6.29,182.41
+216,US-MO,Katusha Howsley,Vegetable Curry,28,5.99,167.72
+217,HN-YO,Al Kunert,Organic Brown Rice Cakes,10,3.99,39.9
+218,US-AK,Garry Sheals,Coconut Cashew Yogurt,22,1.99,43.78
+219,US-MA,Janith Danit,Weighted Blanket,96,79.99,7679.04
+220,KZ-AKT,Bobby Glaysher,Kid's Fruit Snacks,95,2.49,236.55
+221,CA-ON,Martainn Spurdon,Glass Water Bottle,9,25.99,233.91
+222,US-MD,Veronike Pierton,Luxury Rolling Makeup Case,60,99.99,5999.4
+223,UA-65,Smitty Harston,Spicy Hummus,68,3.49,237.32
+224,IT-78,Petr Camel,Outdoor Adventure Backpack,50,59.99,2999.5
+225,US-TX,Germain Etheredge,Mediterranean Couscous,33,3.59,118.47
+226,BS-LI,Laverne Parradine,Mediterranean Chickpea Salad,64,5.99,383.36
+227,DZ-09,Jude Wabey,Denim Jacket,49,69.99,3429.51
+228,AR-R,La verne Klaff,Scent Diffuser Oil,91,14.99,1364.09
+229,US-AK,Helaine Mushet,Bamboo Bathtub Caddy,84,34.99,2939.16
+230,AF-BDS,Mason Milburn,Almond Milk Yogurt,98,1.99,195.02
+231,BW-NW,Ronnica Simkin,Cinnamon Rolls,9,4.49,40.41
+232,MS-U-A,Jethro Mealham,LED Desk Light,90,34.99,3149.1
+233,ET-DD,Sheffie Jesse,Infrared Thermometer,39,39.99,1559.61
+234,ID-PA,Christie Fittall,Organic Black Bean Burger,70,4.49,314.3
+235,NP-KA,Doloritas Vannoni,Nordic Berry Smoothie,92,3.99,367.08
+236,TW-TXG,Carroll Greally,Pumpkin Pancake Mix,78,4.19,326.82
+237,TR-60,Nonah Kelemen,LED Strip Lights with Remote Control,91,29.99,2729.09
+238,US-TN,Sibella Strelitzer,French Bread,68,2.49,169.32
+239,MG-A,Jayme Allsop,Athletic Jogging Jacket,62,49.99,3099.38
+240,PL-PM,Aubine Raft,Organic Coconut Oil,57,8.99,512.43
+241,RU-YAN,Paulie Arnke,Smoky BBQ Jackfruit,97,4.99,484.03
+242,CN-23,Darren Cultcheth,Smart Thermos,97,39.99,3879.03
+243,TZ-22,Flossi Gyorffy,Handcrafted Wooden Coasters,69,19.99,1379.31
+244,CG-14,Stanislas Rubartelli,Cinnamon Roll Kit,14,6.89,96.46
+245,NG-KD,Yehudit Gladwish,Compressible Packing Cubes,65,29.99,1949.35
+246,MX-ROO,Leon Heindl,Maple Pecan Granola,70,4.49,314.3
+247,IT-82,Devland Pendrid,Electric Can Opener,37,29.99,1109.63
+248,PF-U-A,Karil Husbands,Beef Stew Meat,77,5.99,461.23
+249,KZ-KUS,Baird Strettell,Couscous,77,2.49,191.73
+250,MG-M,Daron Machel,Peanut Butter Filled Pretzels,97,3.99,387.03
+251,DZ-01,Cal Crose,Portable Water Filter,49,29.99,1469.51
+252,LY-TB,Yancy Forri,Asian Salad Mix,11,3.99,43.89
+253,SD-05,Cami Stickney,Cheesy Broccoli Soup Mix,46,2.99,137.54
+254,VE-F,Jacquette Sate,Orange Ginger Vinaigrette,6,3.99,23.94
+255,US-CA,Brnaby McWilliams,Wireless Wi-Fi Extender,13,49.99,649.87
+256,LK-2,Marylynne Beacham,Classic Beef Chili,51,7.99,407.49
+257,GB-SCT,Towney Surguine,Lemon Zest Olive Oil,20,8.99,179.8
+258,US-AZ,Arleta McCloughen,Home Karaoke System,91,129.99,11829.09
+259,AU-WA,Merna Zannini,Kids' Educational Tablet,7,129.99,909.93
+260,MN-043,Abbott Jeakins,Bamboo Cutting Board,63,22,1386
+261,IR-22,Jeffie Humber,Warm Wool Sweater,61,59.99,3659.39
+262,CA-NL,Melamie Drysdell,Blender Bottle,86,12.99,1117.14
+263,MW-MG,Ellery McCourtie,Garden Hose Reel,8,49.99,399.92
+264,US-TX,Brooks Poyzer,Garlic Parmesan Wings,55,8.99,494.45
+265,AU-WA,Noam Bernardi,Chickpea Salad Deluxe,97,4.29,416.13
+266,CA-SK,Tammara Pencot,Chipotle Lime Salsa,84,3.99,335.16
+267,US-TX,Konstance Meadus,Ground Turkey,63,5.49,345.87
+268,CA-BC,Agata Frill,Vegetarian Sausage Links,24,5.89,141.36
+269,US-OH,Cordell Carnduff,Lentils,33,2.99,98.67
+270,US-AK,Jeddy Tippetts,Sweet Potato Chips,31,2.99,92.69
+271,US-TX,Brittni Streets,Almond Joy Protein Bars,72,1.99,143.28
+272,BW-NE,Alphonso Althrop,Electric Fondue Pot,39,39.99,1559.61
+273,ZA-GT,Sissy Glas,Lentil Soup (canned),81,1.99,161.19
+274,CL-LR,Meryl Dunguy,Pet Carrier Backpack,92,39.99,3679.08
+275,CD-KE,Dyanne Kensett,Wireless Car Charger,16,24.99,399.84
+276,TR-55,Pandora McQuirter,Tailored Dress Pants,2,79.99,159.98
+277,KZ-ATY,Ronica Sauvan,Juice Extractor,54,99.99,5399.46
+278,LA-LM,King Hugh,Glass Food Containers,3,34.99,104.97
+279,CN-51,Adam Hancox,Compressible Packing Cubes,67,29.99,2009.33
+280,US-FL,Jami Prestland,Teriyaki Salmon Fillets,9,9.99,89.91
+281,US-PA,Harri Wiffill,Tofu,99,2.49,246.51
+282,CA-QC,Clarey Lanchberry,Coconut Cream,38,2.99,113.62
+283,AR-B,Bonnee Borrott,Tomato Basil Pasta Sauce,100,3.99,399
+284,US-AK,Grenville Sushams,LED Under Cabinet Lighting,61,29.99,1829.39
+285,US-SD,Gordan Gaitone,Kale Caesar Salad Kit,35,5.99,209.65
+286,SA-04,Velma Caddick,Wildflower Honey,48,4.99,239.52
+287,PG-WBK,Willey Sweetzer,Creamy Spinach Dip,16,5.99,95.84
+288,ET-AM,Chantal Karmel,Peanut Butter Granola,66,4.99,329.34
+289,AU-WA,Ricoriki Vernall,Window Bird Feeder with Suction Cups,53,28.99,1536.47
+290,US-AK,Morganne Sedgemond,Italian Pasta,8,2.29,18.32
+291,BS-MG,Lonna Soall,Apple Pie Filling,80,3.49,279.2
+292,RU-IRK,Ulrike Pack,Grass Fed Beef Patties,68,9.99,679.32
+293,CL-ML,Lyn McClelland,Coconut Cream,39,2.99,116.61
+294,CO-ANT,Pincus Sirkett,Black Bean & Corn Salad,40,3.99,159.6
+295,IT-55,Ellswerth Scartifield,Toilet Paper (12 rolls),59,8.99,530.41
+296,US-TX,Jarvis Shelley,Measuring Cups Set,36,19.99,719.64
+297,CD-OR,Mendel Kristiansen,Cinnamon Spiced Almonds,68,5.99,407.32
+298,IN-KA,Selinda Beastall,Herb Seasoned Rice,19,2.99,56.81
+299,LR-MY,Hercules Saveall,Spicy Beef Taco Mix,53,1.99,105.47
+300,US-TN,Abbie Berget,Overnight Duffle Bag,28,34.99,979.72
+301,MH-RON,Chanda Rupert,Cranberry Pecan Granola,93,3.99,371.07
+302,US-CA,Gypsy Raimbauld,Bluetooth Tracker,19,19.99,379.81
+303,AU-NT,Nerissa MacCoughan,Honey Glazed Carrots,54,3.49,188.46
+304,HN-YO,Giorgio Rillett,Creamy Garlic Dressing,91,3.99,363.09
+305,IN-CT,Piggy Gailor,Avocado Oil,74,8.49,628.26
+306,GB-ENG,Sophie Pickervance,Honeycrisp Apples,16,1.89,30.24
+307,AU-TAS,Norine Streak,Sea Salt Caramel Popcorn,64,3.99,255.36
+308,BR-MG,Gerry Sexcey,Trackpad for Laptop,92,49.99,4599.08
+309,US-TX,Eugenie Godball,Pasta Primavera,23,4.99,114.77
+310,US-NJ,Shellysheldon Clemencet,Dark Chocolate Almond Butter Cups,100,4.99,499
+311,US-IA,Farra Yusupov,Foot Massager Machine,77,59.99,4619.23
+312,AU-SA,Muffin Brounfield,Electric Blanket,88,59.99,5279.12
+313,CA-ON,Jade Tortice,Kids' Educational Tablet,6,129.99,779.94
+314,CG-14,Marj Abeles,Silicone Ice Cube Tray,71,10.99,780.29
+315,CO-CES,Benny Fulun,LED Strip Lights,48,19.99,959.52
+316,TH-42,Mel Whelan,Eggs (dozen),86,2.99,257.14
+317,BF-NAM,Hildagarde Francais,Digital Voice Recorder,80,49.99,3999.2
+318,US-AK,Quinn Jaspar,Miso Dressing,43,3.49,150.07
+319,US-TN,Gena Fossett,Pet Grooming Scissors,25,16.99,424.75
+320,AU-QLD,Bartholomeus Sandels,Granola Bars,76,4.99,379.24
+321,AU-WA,Marcello Bavester,Self-Cleaning Cat Litter Box,6,199.99,1199.94
+322,US-AR,Cob Hardwin,Chocolate Chip Cookie Dough,60,5.49,329.4
+323,MX-OAX,Urbanus Jasper,Pet Safety Harness,56,24.99,1399.44
+324,MX-DIF,Elsworth Scarlan,Sweet Potato Fries,72,3.99,287.28
+325,NO-12,Hildagard Garlick,Measuring Cups Set,66,19.99,1319.34
+326,AO-LNO,Helyn Gaiger,Pumpkin Waffles,44,4.49,197.56
+327,CN-35,Odo Creese,Cinnamon Sugar Donuts,94,4.99,469.06
+328,US-FL,Stearne Yerrill,Fruit and Nut Energy Bites,71,2.99,212.29
+329,US-WA,Vitia Patters,Portable Phone Mug Holder,19,14.99,284.81
+330,US-TN,Cloris Tanfield,Spicy Thai Chili Sauce,37,3.29,121.73
+331,LV-DA,Nikolaus Mealand,Sweet Potato Mash,3,3.99,11.97
+332,AU-QLD,Sally Hovel,Baking Soda,46,0.99,45.54
+333,US-KS,Keen Shoreman,Creamy Tomato Basil Soup,24,3.29,78.96
+334,BS-RS,Codie Bastone,Veggie Lovers Pizza,28,8.99,251.72
+335,ID-PA,Stu Toffanini,Mango Salsa,71,3.49,247.79
+336,AU-NT,Aeriell Haile,Oven Mitts,63,15.99,1007.37
+337,AR-U,Niko Panchin,Feta Cheese,1,4.99,4.99
+338,AU-WA,Rockwell Loble,Backpacking Tent,76,109.99,8359.24
+339,BR-MT,Malvina Bomb,Handmade Wooden Utensil Set,53,24.99,1324.47
+340,AU-QLD,Terrie Leith-Harvey,Cinnamon Ice Cream,48,4.99,239.52
+341,US-TN,Marven Instrell,Fitness Resistance Bands Set,96,34.99,3359.04
+342,PG-MBA,Avrit Stratton,Handheld Garment Steamer,29,34.99,1014.71
+343,GB-ENG,Guinevere Russan,Organic Spinach,35,2.99,104.65
+344,LA-VT,Dave Minihan,Instant Read Meat Thermometer,90,24.99,2249.1
+345,CA-ON,Henrik Coytes,Spicy Roasted Nuts,17,4.99,84.83
+346,RU-SAK,Sigvard Venes,Coconut Lime Rice,99,2.99,296.01
+347,US-CO,Mariette Hallatt,Carrot and Celery Sticks,16,2.99,47.84
+348,US-TN,Karen Cohan,Decorative LED Neon Sign,30,45.99,1379.7
+349,IS-6,Javier Concannon,Vegetable Sushi Rolls,24,5.99,143.76
+350,LS-J,Jackelyn Bowstead,Wireless Charging Pad,6,19.99,119.94
+351,ZA-NP,Leonora Krysztofiak,Herbal Garden Starter Kit,25,24.99,624.75
+352,TR-26,Donalt Remirez,Almond Flour Tortillas,9,4.99,44.91
+353,MG-D,Simonne Dorkin,Chocolate Almond Milk,40,2.79,111.6
+354,US-TX,Lorry Willcock,Electric Rice Cooker with Steamer,16,49.99,799.84
+355,US-AR,Patti Bedwell,Nutty Trail Mix,82,4.29,351.78
+356,ET-SN,Emelen Bourgour,Pumpkin Puree,68,2.99,203.32
+357,GR-84,Tove Buntain,Fridge Magnet Set,2,15.99,31.98
+358,BW-SO,Enrico Chaundy,Adjustable Pet Grooming Table,68,109.99,7479.32
+359,PG-NPP,Josey Breston,Taro Chips,77,3.59,276.43
+360,US-AK,Myca O'Duilleain,Savory Snack Mix,42,4.49,188.58
+361,MY-13,Fanchette Plenty,Incense Holder,16,14.99,239.84
+362,US-FL,Vic Harrild,Tahini,60,5.49,329.4
+363,US-MT,Carmencita Realph,Savory Pumpkin Soup,86,3.89,334.54
+364,PH-LAN,Adda McKeeman,Screen Cleaning Kit,86,15.99,1375.14
+365,CA-ON,Shea Daughtrey,Home Cleaning Robot,84,249.99,20999.16
+366,FJ-E,Urbanus Prydden,French Bread,30,2.49,74.7
+367,RU-SA,Garret Kurton,Frozen Vegetarian Pizza,88,6.49,571.12
+368,KE-300,Derward Ondrak,Chia Seed Pudding,88,3.99,351.12
+369,PG-CPM,Lavinia Goodredge,Foam Muscle Roller,72,24.99,1799.28
+370,ID-SS,Jonell Jessope,Wall Decals for Kids,38,24.99,949.62
+371,SA-12,Blaine Collisson,Hiking Boots,16,79.99,1279.84
+372,RU-CE,Karel Trimnell,Pistachio Ice Cream,59,4.99,294.41
+373,BR-SP,Charlotta Redparth,Smart WiFi Plug,21,19.99,419.79
+374,CO-CAS,Gwennie Swindlehurst,Running Shorts,79,34.99,2764.21
+375,US-MN,Victoir Danser,Hot Dog Buns,12,2.49,29.88
+376,VN-31,Gayler Laxson,Honey-Balsamic Vinaigrette,80,3.39,271.2
+377,NP-KA,Cookie Syncke,Insulated Coffee Mug,25,24.99,624.75
+378,US-MD,Jan Gerckens,Pressure Washer Accessories Kit,49,39.99,1959.51
+379,US-AZ,Wynnie Lippiett,Hiking Boots,19,79.99,1519.81
+380,CA-NU,Teresa Gounet,Cream Cheese,17,2.69,45.73
+381,IN-WB,Gilbertine Eliez,Digital Drawing Tablet,74,79.99,5919.26
+382,DZ-08,Abraham Lambillion,Robot Vacuum Cleaner,45,299.99,13499.55
+383,NO-17,Dulcine D'Souza,Non-Stick Baking Sheet,72,18.99,1367.28
+384,SE-H,Tessy Berthot,Coffee Grinder,8,39.99,319.92
+385,ZM-07,Dougie Lichtfoth,Smart Air Purifier,40,199.99,7999.6
+386,GF-CY,Gaspar Richten,Ultra-Thin Laptop Sleeve,31,19.99,619.69
+387,ID-AC,Doloritas Shakespeare,Sweet Chili Thai Sauce,35,3.49,122.15
+388,CD-MA,Eula Roelofsen,Sustainable Wooden Toys,60,29.99,1799.4
+389,FR-J,Marty Mackriell,Weighted Blanket,72,79.99,5759.28
+390,US-MA,Michaelina Mangeon,Travel Mug,14,18.99,265.86
+391,BR-SP,Dick Pughe,Pasta Primavera,74,4.99,369.26
+392,AU-WA,Verna Czaja,Sweetened Condensed Milk,22,1.89,41.58
+393,DE-NI,Ketti Wackly,Gardening Tool Belt,48,22.99,1103.52
+394,BR-GO,Gerome Carff,USB Desk Fan,3,14.99,44.97
+395,CA-BC,Ase Cozzi,Portable Hand Warmer,48,24.99,1199.52
+396,US-AZ,Constantia Kirsch,Board Game,66,34.99,2309.34
+397,VE-P,Alden Buckerfield,Hiking Boots,93,79.99,7439.07
+398,JP-46,Harp Eisikowitch,Rice Pilaf Mix,22,2.59,56.98
+399,US-TX,Pennie Nannizzi,Spinach and Ricotta Ravioli,34,6.49,220.66
+400,DK-83,Fanny Wilbud,Soft Plush Throw Blanket,8,29.99,239.92
+401,BE-WLG,Perren Casement,Window A/C Unit,28,299.99,8399.72
+402,PF-U-A,Jordan McAnulty,Lightweight Rain Jacket,14,79.99,1119.86
+403,PF-U-A,Malina Macknish,Spicy Tuna Salad,71,4.49,318.79
+404,SA-01,Jermaine Warboy,Electric Razor,60,59.99,3599.4
+405,CA-BC,Cammi Spatig,Dark Chocolate Tart,24,6.29,150.96
+406,ID-SN,Maressa Plackstone,Multi-Purpose Marine Rope,27,19.99,539.73
+407,US-TX,Abbie Harte,Cauliflower Crust Pizza,6,7.99,47.94
+408,EC-G,Idell Mellows,Lemon Dill Chicken Skewers,30,9.99,299.7
+409,US-MN,Remy Jewar,Reflective Safety Vest,71,19.99,1419.29
+410,PG-NIK,Anett Heimes,Honey Graham Crackers,31,3.29,101.99
+411,CN-65,Harman Fer,Pasta (Fusilli),64,1.79,114.56
+412,US-MT,Dorolice Itzkovich,Shatterproof Wine Glasses,35,24.99,874.65
+413,MX-TAM,Claudio Benois,Frozen Mixed Berries,99,5.99,593.01
+414,TW-PEN,Ian Cicetti,Gluten-Free Brownies,57,4.99,284.43
+415,FR-U,Dinnie Halgarth,Blueberry Muffin Mix,17,4.29,72.93
+416,CL-MA,Nikolos Badder,Pineapple Rings,2,2.49,4.98
+417,FI-LS,Liza Collabine,Kids' Art Easel,3,58.99,176.97
+418,AU-QLD,Farlie Shieldon,Knitted Infinity Scarf,57,29.99,1709.43
+419,RU-SAK,Fidelity Jursch,Digital Alarm Clock,70,19.99,1399.3
+420,IN-GJ,Grenville Tenbrug,Chili Beans in Sauce,72,1.79,128.88
+421,CA-QC,Grissel Wilkowski,Portable Air Purifier,42,69.99,2939.58
+422,VE-Y,Putnem Lewing,Comfy Slippers,31,29.99,929.69
+423,US-KS,Donn Sibbe,Snack Container Set,18,19.99,359.82
+424,KE-700,Min Deverall,Casual Long Cardigan,40,45.99,1839.6
+425,PH-BTN,Melli Ewdale,Classic Caesar Dressing,31,3.49,108.19
+426,TZ-02,Martynne Capoun,Caramel Sauce,8,3.49,27.92
+427,US-AZ,Anjela Wilden,Maple Bacon Jerky,80,6.99,559.2
+428,US-AK,Lesley Huddleston,Rustic Italian Bread,9,3.59,32.31
+429,CN-65,Ellis Hartly,Wall-Mounted Spice Rack,59,39.99,2359.41
+430,PR-U-A,Mohandas Djurisic,Canvas Tote Bag,71,19.99,1419.29
+431,PG-JI,Korella Rontree,Camping Lantern,64,34.99,2239.36
+432,MX-TAM,Tildy Labes,Cucumber Relish,40,3.39,135.6
+433,US-NC,Iolande Depke,Electric Opener for Jars and Bottles,28,24.99,699.72
+434,ID-NT,Brande Sherrocks,Classic Cheesecake Mix,90,4.99,449.1
+435,US-WY,Nikolaus Neeves,Herb Garden Planter Box,90,49.99,4499.1
+436,IT-88,Lorry Fahy,Automatic Pet Feeder,79,69.99,5529.21
+437,MX-JAL,Glynis Gorcke,Organic Green Lentils,26,3.99,103.74
+438,AU-VIC,Bendite Maier,Air Fryer Oven,89,149.99,13349.11
+439,JP-47,Elmira Road,Butternut Squash Soup,68,3.49,237.32
+440,US-TX,Benedetto Haslegrave,Low-Fat Yogurt,87,3.29,286.23
+441,PL-ZP,Sheryl Prevett,Almond Joy Bars,32,1.29,41.28
+442,CG-13,Danette McIndrew,Asian Salad Mix,24,3.99,95.76
+443,MM-07,Tova Daine,Children's Science Experiment Lab Kit,99,29.99,2969.01
+444,MX-SON,Whitney Muspratt,LED Strip Lights,83,19.99,1659.17
+445,US-AR,Llywellyn Beceril,Cocktail Shaker Set,91,29.99,2729.09
+446,KI-G,Carola Robinett,Zesty Cilantro Lime Dressing,73,3.29,240.17
+447,US-AK,Kamilah Rumsby,Classic Black Trousers,20,54.99,1099.8
+448,BR-MG,Cletis Eymer,Cinnamon Sugar Donuts,10,4.99,49.9
+449,US-AK,Mahala Danilchenko,Creamy Garlic Mashed Potatoes,74,3.99,295.26
+450,ZA-NW,Josephine Greguol,Desk Organizer Set,88,29.99,2639.12
+451,US-MS,Aland Thrasher,Organic Coconut Oil,56,8.99,503.44
+452,US-IA,Noell Presho,Classic Minestrone Soup,85,2.99,254.15
+453,BS-NB,Orelie Dragonette,Sunglasses,28,29.99,839.72
+454,US-HI,Mavra Churn,Self-Inflating Camping Mattress,32,49.99,1599.68
+455,CA-BC,Alex Swanne,Blueberry Chia Jam,72,4.99,359.28
+456,CY-02,Josefa Gumb,Outdoor Adventure Backpack,66,59.99,3959.34
+457,DE-NI,Sabrina Cathesyed,Smartphone Tripod with Bluetooth Remote,85,29.99,2549.15
+458,US-NV,Galven Holme,Crispy Chickpeas,65,2.99,194.35
+459,GB-ENG,Gib Brahm,Portable Folding Picnic Table,100,69.99,6999
+460,FR-M,Nataniel Jones,Telescope,41,159.99,6559.59
+461,US-WA,Dione Heintz,Pepper Jack Cheese Sticks,46,2.49,114.54
+462,RO-MM,Katina Bridden,Raisin Cinnamon Granola,73,3.79,276.67
+463,IR-30,Lizette Coppock.,Savory Pumpkin Soup,11,3.89,42.79
+464,JO-AM,Deidre Sillitoe,Electric Screwdriver,50,59.99,2999.5
+465,SE-Q,Hartwell Headech,Almond Flour,19,5.99,113.81
+466,CO-NAR,Betteann Fitzackerley,Puffer Winter Coat,72,99.99,7199.28
+467,US-ID,Paula MacRory,Portable Leaf Blower,99,149.99,14849.01
+468,CA-BC,Shaine Tolworth,Brownie Bites,4,4.99,19.96
+469,VU-MAP,Emmye Lomasney,Vegetarian Chili,100,3.99,399
+470,RU-KHA,Kerstin Northam,Fashionable Scarves Set,83,24.99,2074.17
+471,CA-QC,Idalia Summerill,Zucchini Noodles,85,3.99,339.15
+472,CA-BC,Luigi Cathery,Coconut Cream Pie Yogurt,64,1.99,127.36
+473,US-VA,Juanita Iannuzzelli,Multi-Function Smartphone Holder,56,12.99,727.44
+474,FI-IS,Jammal Johantges,Printed Maxi Skirt,6,39.99,239.94
+475,US-PA,Hernando Dunkerton,Comfort Flats,44,44.99,1979.56
+476,US-AK,Ricard Bullant,Raspberry Limeade,23,1.99,45.77
+477,FJ-E,Lanni Lemerie,Oven-Baked Chicken Tenders,65,6.99,454.35
+478,MY-13,Ignacio Caves,Oversized Denim Shirt,35,49.99,1749.65
+479,US-AK,Baron Fishburn,Multi-Purpose Marine Rope,20,19.99,399.8
+480,BR-RS,Jessamine Loveless,Electric Griddle with Lid,79,49.99,3949.21
+481,LU-L,Ailis Boud,Collapsible Colander,70,14.99,1049.3
+482,US-MI,Lola Self,Honey Sesame Cashews,4,4.49,17.96
+483,AR-Z,Eleanor Beebis,Caramel Apple Chips,11,3.49,38.39
+484,NP-SA,Krystyna Schade,Set of Silicone Baking Molds,32,15.99,511.68
+485,CG-7,Guthrie Zanini,Marinated Artichokes,31,3.79,117.49
+486,BS-FP,Sigfried Brugman,Raspberry Lemonade Mix,95,3.99,379.05
+487,PH-NSA,Sonnie Zuppa,Chickpea Pancakes,35,4.99,174.65
+488,CO-CES,Bibbie Tousey,Electric Screwdriver,3,59.99,179.97
+489,GB-ENG,Denny Hiner,Pet Activity Tracker,75,59.99,4499.25
+490,KZ-KAR,Antonina Higginbottam,Compact Portable Grill,65,79.99,5199.35
+491,CA-QC,Emmanuel Notley,Tomato Paste,67,1.29,86.43
+492,EG-ALX,Tasia Lucchi,Warm Wool Sweater,41,59.99,2459.59
+493,BR-GO,Ferdy Lanegran,Pet Grooming Brush,55,19.99,1099.45
+494,ZA-NC,Merlina Neat,Travel Pillow,71,22.99,1632.29
+495,TC-SL,William Flori,Red Lentil Pasta,65,3.99,259.35
+496,RU-YAN,Dionne Hacun,Chipotle Seasoning Blend,82,2.49,204.18
+497,KR-29,Carlen Giacoboni,Steak Seasoning Rub,33,2.49,82.17
+498,AU-QLD,Oralla Widdowfield,Beef Stroganoff Meal Kit,58,12.99,753.42
+499,NZ-CAN,Leona Verzey,Honey Graham Crackers,98,3.29,322.42
+500,GB-ENG,Venus Horsfield,Fitness Balance Ball,81,24.99,2024.19
+501,US-NE,Leroi Camilletti,Thyme,72,2.49,179.28
+502,SI-070,Linnell Micklem,Dog Walking Waist Pack,50,19.99,999.5
+503,US-NY,Corrie Toth,Digital Food Thermometer,84,19.99,1679.16
+504,US-CA,Lizzy Rusk,Athletic Jogging Jacket,12,49.99,599.88
+505,NO-17,Chery Wickardt,Chipotle Lime Salsa,58,3.99,231.42
+506,GT-ES,Mercedes Jursch,Coconut Cashew Yogurt,63,1.99,125.37
+507,HN-LE,Bambie MacIlurick,Sun Protection Clothing,48,44.99,2159.52
+508,IR-15,Roselia Billion,Classic Cheesecake Mix,92,4.99,459.08
+509,BR-GO,Melitta Pulfer,Italian Marinara Sauce,51,3.29,167.79
+510,US-LA,Carolan Langston,Pet Travel Bed,46,26.99,1241.54
+511,ID-PB,Malinda Cadalleder,Digital Thermostat,45,59.99,2699.55
+512,US-AK,Afton Tocknell,Infrared Thermometer,85,39.99,3399.15
+513,YT-U-A,Toma Bernaldez,Teriyaki Beef Jerky,47,5.49,258.03
+514,CN-42,Adelice Aksell,Tuscan Bean Soup,49,2.49,122.01
+515,US-PA,Patience Cluitt,Chicken Fajita Kit,22,8.99,197.78
+516,NO-20,Rollo Petric,Butternut Squash Soup,78,3.49,272.22
+517,PK-BA,Webster Hamblett,Digital Voice Recorder,85,49.99,4249.15
+518,CA-NU,Jada Simmonett,Wireless Keyboard and Mouse Combo,46,34.99,1609.54
+519,TH-57,Padriac MacConnell,Pepper Jack Cheese Slices,69,3.49,240.81
+520,BR-RN,Karim Hele,Eco-Friendly Beeswax Wraps,68,14.99,1019.32
+521,AU-SA,Eleen Jannaway,Motion Sensor Light,93,19.99,1859.07
+522,US-CA,Sacha Goundrill,Face Mask Set,5,19.99,99.95
+523,PK-PB,Johan Godon,Glass Tea Pot,79,34.99,2764.21
+524,NI-MN,Eduardo Jelfs,Wrap Jumpsuit,38,54.99,2089.62
+525,BR-BA,Wain Mahaddy,Bike Helmet,100,34.99,3499
+526,ID-PA,Maddie Hirsch,Picnic Blanket,25,29.99,749.75
+527,CN-45,Holly Tartt,Sun-Dried Tomatoes,44,3.99,175.56
+528,MM-05,Fred Carnier,Fitness Tracker with Heart Rate Monitor,90,59.99,5399.1
+529,PH-CAV,Lois Brodest,Electric Can Opener,76,29.99,2279.24
+530,AU-QLD,Kennie Macilhench,Apple Cinnamon Oatmeal,20,2.89,57.8
+531,TH-76,Annabal Gauson,Homestyle Chicken Noodle Soup,26,2.99,77.74
+532,US-OR,Kalli Maben,Electric Griddle with Removable Plates,24,59.99,1439.76
+533,AR-U,Torrance Babb,Savory Breakfast Sausage,85,6.49,551.65
+534,PH-LUN,Brandie End,Safety Goggles,99,14.99,1484.01
+535,DE-BE,Thane Serrurier,Travel Luggage Scale,26,14.99,389.74
+536,AT-9,Broddy Dietmar,Fridge Magnet Set,19,15.99,303.81
+537,IT-21,Catharina Frankel,Plant Growing Kit,16,22.99,367.84
+538,AD-07,Vina Dumper,Pet Travel Backpack Carrier,68,49.99,3399.32
+539,GY-UT,Hildagarde Kirman,Italian Sausage Links,83,5.99,497.17
+540,US-NC,Alvera Accombe,Spicy Vegetable Sushi Rolls,56,8.49,475.44
+541,CN-43,Gianni Wickrath,Magnetic Puzzle Board,73,24.99,1824.27
+542,BJ-CO,Jasmine Dowtry,Pet Grooming Brush,44,19.99,879.56
+543,CN-53,Tommy Smitherham,Pocket Blanket,92,24.99,2299.08
+544,US-TX,Eileen Beaston,Truffle Parmesan Fries,10,4.99,49.9
+545,IN-KA,Calley Bartoloma,Wall Art Stickers,22,19.99,439.78
+546,US-IA,Ileana Wakeham,Basil Pesto Pasta,48,6.49,311.52
+547,ID-JA,Thorstein Priddie,Frozen Berry Blend,65,4.99,324.35
+548,US-NM,Corbie Seathwright,Apple Cinnamon Breakfast Muffins,84,3.49,293.16
+549,CA-ON,Noella Juszkiewicz,Fresh Strawberries,70,3.99,279.3
+550,US-WY,Morie Garmey,Multi-Port USB Hub,39,19.99,779.61
+551,FJ-N,Codie Melbourn,Gluten-Free Pancake Mix,8,5.99,47.92
+552,TR-44,Adolpho Grinham,Crispy Potato Tots,55,3.69,202.95
+553,FR-O,Candida Arguile,White Rice,73,1.49,108.77
+554,MG-D,Thalia Sabates,Oats,29,3.29,95.41
+555,BR-GO,Daisie Dovidian,Lemonade Mix,74,1.99,147.26
+556,US-AK,Ula Instock,Wire Shelving Unit,55,69.99,3849.45
+557,CA-NT,Winona Burmaster,Habanero Hot Sauce,88,3.79,333.52
+558,RU-KYA,Anitra Baress,Granola Cereal,87,4.49,390.63
+559,MX-COA,Ursala Carmen,Cinnamon Spiced Almonds,14,5.99,83.86
+560,AU-WA,Alyson Mateiko,Car Seat Organizer,42,14.99,629.58
+561,KE-900,Karylin Paolino,Almond Butter Cups,73,3.29,240.17
+562,GT-PE,Selene Drohane,Wall Planner,79,19.99,1579.21
+563,US-FL,Anselm Magog,Nail Polish Set,52,25,1300
+564,AU-WA,Philis Delhanty,Reusable Food Storage Bags,79,19.99,1579.21
+565,DO-01,Chane Weeke,Sweet Chili Thai Sauce,38,3.49,132.62
+566,PG-SAN,Monroe Ferrarini,Oven-Baked Potato Chips,55,2.79,153.45
+567,NZ-CAN,Florida Brownsey,Mesh Laundry Bags Set,94,12.99,1221.06
+568,US-CO,Ardenia Mullord,Garden Hose,18,32.99,593.82
+569,AU-QLD,Adriano Matyushenko,Electronic Drum Kit,67,359.99,24119.33
+570,CK-U-A,Clarke Grimsdyke,Wireless Car Charger,21,24.99,524.79
+571,NO-20,Jewell Moline,Smart Wi-Fi Light Bulbs,41,19.99,819.59
+572,AR-B,Devy Caris,Stuffed Bell Peppers,12,5.99,71.88
+573,US-NE,Amandy MacKeogh,Ginger Turmeric Latte Mix,63,5.29,333.27
+574,CA-AB,Ezequiel Bealton,Artisan Bread,32,4.59,146.88
+575,CD-OR,Ryley Goadsby,Orange Ginger Vinaigrette,97,3.99,387.03
+576,BR-RO,Anne Dybell,Travel Document Organizer,53,15.99,847.47
+577,US-ME,Latashia Rens,Eco-Friendly Disposable Plates,58,22.99,1333.42
+578,GH-NP,Cherida Woodroof,Lightweight Backpacking Tent,44,129.99,5719.56
+579,PG-SAN,Porter McGilvary,Reusable Produce Bags Set,83,14.99,1244.17
+580,PG-SAN,Hugibert MacAskill,Vegan Taco Seasoning,33,2.49,82.17
+581,CH-VD,Cherianne Tembridge,Spicy Garlic Edamame,22,3.99,87.78
+582,US-IL,Mirna Fuge,Cable Knit Beanie,64,19.99,1279.36
+583,GA-1,Edee Rulten,Manual Coffee Grinder,76,22.99,1747.24
+584,IL-Z,Arly Shoulder,Adjustable Standing Desk,92,299.99,27599.08
+585,ZM-04,Blondelle Roget,Spicy Thai Chili Sauce,19,3.29,62.51
+586,MW-MZ,Henriette Critch,Car Escape Tool,30,12.99,389.7
+587,CA-YT,Arte Woffenden,Biodegradable Phone Case,61,23.99,1463.39
+588,AU-QLD,Traci Oxbury,Electrolyte Water Bottle,83,34.99,2904.17
+589,AU-TAS,Rand Pickover,Pet Training Pads,29,24.99,724.71
+590,AO-CUS,Ola Jefferys,Portable Camping Stove,15,49.99,749.85
+591,CF-MB,Oralia Quixley,Air Purifier,48,129.99,6239.52
+592,CA-NT,Chuck Bowfin,Garden Tool Belt,14,22.99,321.86
+593,FR-O,Alexandrina Parades,Grapes (red),23,3.49,80.27
+594,US-NE,Fredi Bustin,Canned Black Beans,91,1.29,117.39
+595,TR-49,Currey Naris,Pumpkin Spice Cookies,98,3.29,322.42
+596,RU-KHA,Yoshiko Drewell,Roasted Vegetable Medley,78,3.99,311.22
+597,ZA-GT,Micaela Smeath,Chocolate Chip Energy Balls,32,3.99,127.68
+598,US-FL,Virginie Chisholm,Spaghetti and Meatball Dinner Kit,90,7.99,719.1
+599,MM-04,Allyn Falkus,Digital Meat Thermometer,26,24.99,649.74
+600,MX-COL,Kenyon Byram,Spicy Tuna Rolls,69,6.49,447.81
+601,MV-MLE,Hersch Spera,Fleece Throw Blanket,76,29.99,2279.24
+602,AE-AZ,Derron Verman,Avocado Oil,45,8.49,382.05
+603,US-OK,Filippa Jellis,Cotton Pajama Set,26,49.99,1299.74
+604,UA-53,Alison Sarra,Teriyaki Stir-Fry Sauce,45,3.49,157.05
+605,AU-NT,Blondy Munn,Honeycrisp Apples,83,1.89,156.87
+606,US-MO,Walden Aslett,Video Camera,59,199,11741
+607,US-LA,Francisca Bartunek,Overnight Duffle Bag,53,34.99,1854.47
+608,ID-PA,Leanor Benediktsson,LED Camping Lantern with USB Charging,79,34.99,2764.21
+609,AU-QLD,Todd Rieflin,Ergonomic Gaming Chair,93,199.99,18599.07
+610,AU-QLD,Karissa Villaron,Portable Solar Path Lights,99,39.99,3959.01
+611,IR-22,Milty Piburn,Wireless Security Camera,86,109.99,9459.14
+612,US-CA,Ann-marie Danniell,Himalayan Salt Grinder,60,4.99,299.4
+613,CM-SW,Susana Panks,LED Strip Lights,33,19.99,659.67
+614,US-AZ,Letta Pigney,Sun-Dried Tomatoes,32,3.99,127.68
+615,NG-KD,Karlyn Tomasini,Toilet Paper (12 rolls),80,8.99,719.2
+616,US-HI,Amery Hinksen,Paint By Numbers Kit,31,24.99,774.69
+617,US-FL,Marlane Camilio,LED Canopy Lights,63,29.99,1889.37
+618,PG-MBA,Ninetta Twelvetrees,Curried Lentil Salad,95,4.29,407.55
+619,BR-SC,Loria Baulk,Sweet Potato and Chickpea Bowl,97,6.49,629.53
+620,US-AR,Pollyanna Maggorini,Tabletop Fire Pit,64,79.99,5119.36
+621,CO-MAG,Brana Dendon,Pet Reflective Vest,3,18.99,56.97
+622,MZ-I,Martin Fish,Black Bean Salsa,17,3.49,59.33
+623,US-OH,Mar Sweeny,Manual Coffee Grinder,84,22.99,1931.16
+624,PA-7,Seamus Belliveau,Chili Beans in Sauce,57,1.79,102.03
+625,US-AZ,Gillian Euesden,Electric Food Slicer,27,99.99,2699.73
+626,ES-GE,Foster Corona,Herbal Tea Variety Pack,30,4.99,149.7
+627,FR-C,Chen Tritton,Interactive Robot Toy,58,34.99,2029.42
+628,WF-U-A,Cinnamon Elwood,Pasta Maker,39,39,1521
+629,US-AK,Emelina Maasz,Two-Tone Windbreaker,30,59.99,1799.7
+630,NO-06,Olva Gumbrell,Home Brewing Starter Kit,12,79.99,959.88
+631,FR-Q,Ashby Witz,A-Line Skirt,54,35.99,1943.46
+632,BS-AC,Edee de Bullion,Sweet BBQ Dipping Sauce,34,3.49,118.66
+633,AU-NT,Gabbie Itzcovich,Low-Fat Cottage Cheese,40,2.99,119.6
+634,PF-U-A,Baxter Garbott,Cotton Pajama Set,67,49.99,3349.33
+635,CA-ON,Uri Charpling,DIY Lip Balm Kit,57,22.99,1310.43
+636,ES-AN,Chris Glew,Coconut Cream,47,2.99,140.53
+637,OM-WU,Korrie Gerkens,Caribbean Jerk Marinade,49,3.79,185.71
+638,PH-BEN,Doyle Piola,Deep Tissue Massage Gun,57,89.99,5129.43
+639,MY-12,Maudie Chable,Shower Curtain Hooks,62,12.99,805.38
+640,TH-81,Giacopo Wrenn,Cranberry Orange Oatmeal,56,2.49,139.44
+641,PG-ESW,Bank Colwill,Berry Smoothie Mix,37,4.99,184.63
+642,US-AR,Kareem Devinn,Stainless Steel Mixing Bowls,73,29.99,2189.27
+643,US-IA,Isabelle Matousek,Fitness Smartwatch,72,99.99,7199.28
+644,IO-U-A,Annalise Mathen,Athletic Jogging Jacket,21,49.99,1049.79
+645,AU-QLD,Koral McFade,Beef Enchilada Casserole,95,8.99,854.05
+646,HN-GD,Cherice Ragdale,Bodyweight Resistance Bands,23,22.99,528.77
+647,MG-U,Emyle McAnulty,Stainless Steel Cutlery Set,39,29.99,1169.61
+648,US-MO,Kerrie Liccardo,Pasta Primavera,81,4.99,404.19
+649,US-MO,Hallsy Konert,Couscous,70,2.49,174.3
+650,AU-NT,Owen Detloff,Electric Rice Cooker with Steamer,3,49.99,149.97
+651,CN-63,Celestia Horrigan,Lemon Garlic Shrimp,30,8.99,269.7
+652,EG-MT,Manuel Rudledge,Black Olives,22,1.99,43.78
+653,WS-TU,Lucias Donne,Creamy Coleslaw Mix,44,2.39,105.16
+654,US-CA,Ardelia MacNulty,Fitness Foam Roller,81,29.99,2429.19
+655,AR-K,Shellie Lukovic,Workstation Laptop Stand,47,49.99,2349.53
+656,US-CA,Hanni Toms,Electric Kettle,99,39.99,3959.01
+657,PF-U-A,Shea Peperell,Marinated Artichokes,70,3.79,265.3
+658,US-WA,Anselm Wild,Garlic Herb Grilled Chicken,97,8.99,872.03
+659,US-OH,Orville Surmeir,Applewood Smoked Bacon,94,6.99,657.06
+660,EC-M,Brewster Bruin,Insulated Sport Tumbler,99,22.99,2276.01
+661,US-AK,Calley Syddall,Zesty Garlic Marinade,2,4.49,8.98
+662,BR-SP,Roma Mafham,Basmati Rice,6,5.79,34.74
+663,CH-VS,Dru Goldthorp,Zesty Garlic Marinade,41,4.49,184.09
+664,US-MI,Franz Leythley,Air Fryer Oven,100,149.99,14999
+665,CK-U-A,Inger Josifovic,Fashionable Scarves Set,16,24.99,399.84
+666,PT-11,Pierce Coddington,Dog Waste Bag Dispenser,3,6.99,20.97
+667,US-CA,Portia Servante,Maple Almond Granola,88,5.49,483.12
+668,JP-01,Vere Gini,Stylish Wide-Leg Trousers,72,59.99,4319.28
+669,MH-WTN,Tasha Rowaszkiewicz,Cinnamon Sugar Mix,75,1.49,111.75
+670,CF-HM,Trixi Le Brom,Window A/C Unit,17,299.99,5099.83
+671,US-GA,Lexine Bradfield,Portable Jump Starter,24,59.99,1439.76
+672,SD-12,Darda Bernardi,Kids' Craft Supplies Set,78,24.99,1949.22
+673,NZ-NSN,Vita Dreghorn,Travel Pillow,100,22.99,2299
+674,PL-MZ,Fernande Ensor,Organic Black Beans,14,1.29,18.06
+675,US-CA,Wenona Andrus,Air Fryer Oven,25,149.99,3749.75
+676,AR-D,Rob Bennington,Tailgating Set,12,89.99,1079.88
+677,DE-NW,Kiah Frame,Cocoa Powder,56,3.99,223.44
+678,BR-RS,Cherice Cockland,Fitness Foam Roller,77,29.99,2309.23
+679,GQ-WN,Tess Falkous,Coconut Cream,1,2.99,2.99
+680,IS-6,Layton Porkiss,Adjustable Standing Desk,70,299.99,20999.3
+681,WF-U-A,Zora Lascelles,Magnetic Whiteboard,83,34.99,2904.17
+682,FR-U,Louie Staite,Jump Rope with Counter,32,12.99,415.68
+683,PG-MPL,Egan Binford,Almond Crunch Granola Bars,39,3.49,136.11
+684,GL-U-A,Dianne Ingman,Set of Herb Garden Markers,86,8.99,773.14
+685,AU-WA,Jabez Branchet,Italian Herbal Seasoning,12,1.99,23.88
+686,PG-SAN,Honor Fehners,Compact Dishwasher,15,299.99,4499.85
+687,CA-MB,Tiena Denzey,Wireless Earbud Silicone Covers,62,9.99,619.38
+688,MX-COL,Lola Portal,Sporty Slide Sandals,18,24.99,449.82
+689,US-MI,Niven Digwood,Honey Sesame Cashews,32,4.49,143.68
+690,US-GA,Edmund Hext,Deep Tissue Massage Gun,39,89.99,3509.61
+691,TD-SA,Erhart Gilvary,Chiffon Blouse,44,39.99,1759.56
+692,US-WA,Melosa Davydochkin,Brussels Sprouts,6,3.49,20.94
+693,DE-SL,Blair Gives,Peanut Butter Cookies,77,3.49,268.73
+694,VE-F,Hildagarde Kamenar,Rechargeable Laptop Battery Pack,24,49.99,1199.76
+695,US-TX,Dillie Catcheside,Smartphone Gimbal,44,89.99,3959.56
+696,AU-NSW,Carlota Gaber,Herbal Tea Sampler Box,25,29.99,749.75
+697,IR-03,Peggie Kelberman,Infrared Space Heater,52,99.99,5199.48
+698,BY-MI,Martguerita Scholcroft,Peach Salsa,49,3.29,161.21
+699,US-LA,Christian Clutram,Personal Blender,6,39.99,239.94
+700,US-CA,Arthur Bryce,Coconut Cashew Yogurt,69,1.99,137.31
+701,PG-MPL,Byron Bleything,Nutty Trail Mix,46,4.29,197.34
+702,UG-406,Janette Chatwin,Inflatable Party Cooler,81,19.99,1619.19
+703,LK-5,Shirline Bransom,LED Makeup Mirror,19,39.99,759.81
+704,UA-18,Wendye Siseland,Pet Reflective Vest,89,18.99,1690.11
+705,PG-EBR,Dorelia Buckston,Wireless Range Extender,41,49.99,2049.59
+706,CN-52,Benjamen Wooff,Fitness Tracker Watch,6,79.99,479.94
+707,BR-RJ,Sarah Hicken,Garlic Herb Seasoning,34,1.99,67.66
+708,BR-RS,Babbette MacGown,Fitness Smartwatch,1,99.99,99.99
+709,CM-NO,Bail Michiel,Snack Container Set,40,19.99,799.6
+710,BR-SP,Tyrone Rosevear,Fruit Medley Juice,82,3.49,286.18
+711,FR-R,Maurizia Ouldcott,Adjustable Pedicure Footrest,48,39.99,1919.52
+712,BO-S,Dell Kerrigan,Beef Taco Skillet,97,8.49,823.53
+713,PK-SD,Devi Vaudre,Dog Training Clicker,41,5.99,245.59
+714,CN-23,Clarinda McGrey,Under Desk Footrest,29,29.99,869.71
+715,GA-4,Cullan Withey,Reusable Snack Bags,77,14.99,1154.23
+716,SO-BR,Davide Benduhn,Digital Wireless Meat Thermometer,9,39.99,359.91
+717,FI-OL,Reginauld Clampe,Kale & Quinoa Salad Mix,72,4.49,323.28
+718,CN-43,Rudie Starzaker,Italian Sausage Links,27,5.99,161.73
+719,US-KS,Thatch Ferraretto,Laundry Detergent,77,12.99,1000.23
+720,RU-SA,Cameron Calloway,Noise Reduction Headphones,58,39.99,2319.42
+721,MX-AGU,Twila Bumphries,Folding Backpack Chair,83,49.99,4149.17
+722,SE-BD,Madelaine Wellesley,Brownie Bites,46,4.99,229.54
+723,US-MI,Deni Caslane,LED Desk Light,66,34.99,2309.34
+724,CA-BC,Nicol Kristufek,Organic Blueberries,19,5.49,104.31
+725,US-AK,Glynda Pape,Elegant Maxi Skirt,11,44.99,494.89
+726,TW-X-KM,Amelita Frow,Portable Dog Water Bottle,83,18.99,1576.17
+727,US-WA,Miriam Hawkey,Fitness Tracker with Heart Rate Monitor,64,59.99,3839.36
+728,US-CA,Joy Carabet,Apple Sauce,88,2.19,192.72
+729,PK-PB,Delmar Lindores,Reversible Comforter Set,89,89.99,8009.11
+730,BF-BLG,Eal Medendorp,Outdoor Fire Pit,3,149.99,449.97
+731,YE-HD,Eward Aspinall,Gluten-Free Pancake Mix,88,5.99,527.12
+732,AU-QLD,Griz Harrower,Streaming Device,65,49.99,3249.35
+733,ZA-NP,Bealle Attaway,Corn Tortillas,80,2.49,199.2
+734,AU-NT,Elsey Folger,Outdoor Folding Table,72,39.99,2879.28
+735,TL-BO,Mei Warters,Fitness Tracker,91,49.99,4549.09
+736,US-NC,Sandro Kennler,Baked Potato Chips,85,2.49,211.65
+737,CR-G,Hanny Angrock,Pasta Maker,5,39,195
+738,BA-BIH,Leanora Keel,Electric Wax Warmer,16,22.99,367.84
+739,US-NM,Artemas Torvey,Biodegradable Phone Case,83,23.99,1991.17
+740,SG-04,Tye Cullrford,Portable Solar Phone Charger,32,29.99,959.68
+741,CO-NAR,Babita Kagan,Adjustable Yoga Mat Strap,98,14.99,1469.02
+742,PH-MSC,Erasmus Monroe,Granola Bars,84,4.99,419.16
+743,US-AK,Maren Franseco,Bike Repair Tool Kit,48,29.99,1439.52
+744,US-LA,Lou Yakebovich,Buffalo Chicken Wraps,31,5.99,185.69
+745,PG-EHG,Cindra Rawlcliffe,Rice Pilaf Mix,31,2.59,80.29
+746,RU-SA,Noll Ruzic,Coconut Granola,36,4.19,150.84
+747,FJ-E,Rosanne Bole,Two-Tier Fruit Basket,21,29.99,629.79
+748,SL-E,Auria McGurgan,Biodegradable Dog Waste Bags,27,14.99,404.73
+749,CU-12,Toinette Saunier,Multi-Port USB Hub,23,19.99,459.77
+750,DZ-14,Xaviera Taile,Hot Dog Buns,62,2.49,154.38
+751,US-NJ,Rodd Allanby,Magnetic Chess Set,1,19.99,19.99
+752,CK-U-A,Arlina Iacivelli,Multi-Function Smartphone Holder,19,12.99,246.81
+753,TR-56,Falkner Haversham,Premium Flashlight,78,19.99,1559.22
+754,AU-QLD,Elsy Jordi,BBQ Lentil Chips,85,3.49,296.65
+755,ET-GA,Graeme Radborne,Vegetable Stock,50,2.49,124.5
+756,ZM-05,Lizette Cremin,Travel Pillow with Memory Foam,92,29.99,2759.08
+757,CA-NT,Estrellita Ashness,Reusable Snack Bags,98,14.99,1469.02
+758,US-NC,Shandie McSherry,Fridge Magnet Set,27,15.99,431.73
+759,AU-TAS,Verney Nassey,Hummus Trio Pack,80,5.49,439.2
+760,WF-U-A,Timoteo Beathem,Electric Toothbrush,63,49.95,3146.85
+761,NO-14,Tally Rosen,Smartwatch,67,199.99,13399.33
+762,US-CO,Werner d' Eye,Children's Garden Tool Set,91,22.99,2092.09
+763,CA-SK,Camella Osbidston,Electric Toothbrush Holder,47,14.99,704.53
+764,GB-ENG,Timotheus Ivanisov,Sliced Bread,3,2.99,8.97
+765,AU-NSW,Lucien Edeson,Coconut Yogurt,49,3.89,190.61
+766,PA-KY,Jarvis Poynton,Sports Water Bottle with Infuser,27,19.99,539.73
+767,US-AK,Cloris Ephson,Electric Skillet,44,49.99,2199.56
+768,AR-B,Emlyn Copas,Maple Cinnamon Almonds,89,4.29,381.81
+769,GB-SCT,Rikki Restieaux,Digital Food Thermometer,33,19.99,659.67
+770,TR-12,Creight O'Growgane,Legging Pants,62,34.99,2169.38
+771,EG-BA,Anjela Vedntyev,Flavored Popcorn Mix,65,2.99,194.35
+772,VU-SEE,Benoit Funcheon,Organic Honeycrisp Apples,95,1.99,189.05
+773,US-AK,Hinda Goublier,Ranch Dressing,48,2.59,124.32
+774,CN-32,Otha Dun,Smart Home Hub,28,99.99,2799.72
+775,MM-17,Valencia Seyffert,Pet Travel Bowl,46,10.99,505.54
+776,MN-065,Joletta Fryatt,Sports Bottle,18,15.99,287.82
+777,US-ID,Kassandra Ganders,Wireless Printer,89,99.99,8899.11
+778,NP-SA,Tildi Paal,Herb Seasoned Rice,43,2.99,128.57
+779,US-AK,Jesus McKilroe,Microwave Popcorn Maker,76,19.99,1519.24
+780,US-MT,Ritchie Halms,Organic Coconut Water,35,2.79,97.65
+781,VE-L,Michell Curro,Memory Foam Mattress Topper,13,109.99,1429.87
+782,MH-MIL,Dasie Mungane,Dog Training Collar,70,39.99,2799.3
+783,CA-BC,Lyle McCathay,Wall Art,77,45,3465
+784,CO-VAC,Tammie Legat,Peanut Butter Protein Balls,78,5.29,412.62
+785,CO-CUN,Connor Vasenkov,Artisan Bread,58,4.59,266.22
+786,IN-MM,Putnem Hinners,Vegetable Fried Rice Mix,3,3.99,11.97
+787,US-PA,Marissa Frift,Ethically-Sourced Coffee Beans,1,9.99,9.99
+788,CA-NT,Dougie Struttman,High-Speed Hand Blender,15,39.99,599.85
+789,US-AK,Meggi Hannabuss,Raspberry Lemonade Mix,94,3.99,375.06
+790,CO-ANT,Nikkie Lamburne,Laundry Detergent,51,12.99,662.49
+791,CA-BC,Cobby Andreu,Rechargeable Electric Toothbrush,8,49.99,399.92
+792,PG-MPL,Anne-marie Hefferan,High-Quality Yoga Block,85,12.99,1104.15
+793,US-CA,Mata Newark,Nutritional Yeast,73,3.59,262.07
+794,ET-BE,Nelly Livesay,Maple Pecan Oatmeal Cookies,17,3.99,67.83
+795,ID-MU,Rube Vaughan,Pet Grooming Brush,38,19.99,759.62
+796,CO-CHO,Perren Mattin,Stainless Steel Water Bottle,35,25.99,909.65
+797,AU-QLD,Jeremias Claybourne,Teriyaki Sauce,65,2.99,194.35
+798,ZA-NP,Foss Wiffield,Travel Eye Mask with Ear Plugs,100,15.99,1599
+799,IT-82,Edita Codi,Tandoori Chicken Marinade,67,2.49,166.83
+800,VE-O,Jenna McLemon,Wireless Music Receiver,15,19.99,299.85
+801,IT-82,Gunther Topliss,Crispy Onion Rings,37,4.29,158.73
+802,US-AK,Nita Noen,Sweet Chili Thai Sauce,81,3.49,282.69
+803,AU-QLD,Nomi Whewill,Organic Coconut Flakes,34,3.49,118.66
+804,DZ-47,Keven Rulton,Chocolate Almond Milk,26,2.79,72.54
+805,US-AK,Claudius Andrioni,Graphic Hoodie,5,49.99,249.95
+806,VU-SEE,Kipp Twamley,Handheld Vacuum,74,79.99,5919.26
+807,PT-15,Dacey Housecraft,Chickpea Salad Deluxe,10,4.29,42.9
+808,CF-HM,Magda Reason,Deluxe First Aid Kit,59,39.99,2359.41
+809,US-FL,Josselyn Falkus,Kale Chips,90,3.99,359.1
+810,US-MA,Lexis Wardale,Peanut Butter,74,3.79,280.46
+811,MR-09,Berry D'Angeli,Electric Stool Heater,80,29.99,2399.2
+812,LS-H,Maurene Notman,Rechargeable Electric Toothbrush,97,49.99,4849.03
+813,MY-10,Angel Pittford,Almond Butter Granola Bars,36,4.99,179.64
+814,PE-ICA,Leona Stranks,Shoe Organizer,35,39.99,1399.65
+815,GF-SL,Gratiana Southerns,Sporty Slide Sandals,49,24.99,1224.51
+816,IL-D,Anabella Bruneton,Multicolored LED Strip Lights,72,29.99,2159.28
+817,DZ-17,Isabella Achurch,Children's Educational Puzzle,17,19.99,339.83
+818,ID-PA,Serene Shotboulte,Pasta Primavera,48,4.99,239.52
+819,US-WI,Giustina Tanguy,Pet Leash,84,15.99,1343.16
+820,SO-WO,Tracy Andree,Fitness Mat,31,49.99,1549.69
+821,US-SC,Flory Landsborough,Grilled Veggie Burgers,79,6.29,496.91
+822,BR-PA,Sebastian Presser,Vanilla Protein Powder,87,24.99,2174.13
+823,NO-04,Elizabet Paulusch,Puzzle Mat,91,22.99,2092.09
+824,IT-36,Vera L'oiseau,Mini Air Purifier,14,49.99,699.86
+825,US-PA,Lorenzo Mockett,Spicy Thai Chili Sauce,10,3.29,32.9
+826,BR-SP,Arne Polin,Mini Food Processor,84,39.99,3359.16
+827,LK-4,Hanna Stone Fewings,Oatmeal Raisin Cookies,22,3.49,76.78
+828,CA-YT,Carree Jovovic,Homestyle Chicken Noodle Soup,17,2.99,50.83
+829,CN-45,Dahlia Springtorp,Phone Screen Protector,54,12.99,701.46
+830,US-TX,Helyn Vasilechko,Cold Brew Coffee Maker,79,34.99,2764.21
+831,PF-U-A,Dinny Kempston,Compact Refrigerator,94,199.99,18799.06
+832,US-UT,Harlin Gatsby,Ripped Boyfriend Jeans,17,54.99,934.83
+833,AU-NSW,Dulci Dell'Abbate,Spinach and Ricotta Ravioli,13,6.49,84.37
+834,US-NY,Ranee de Verson,Reusable Coffee Filter,66,10.99,725.34
+835,US-IA,Shandy Laurentin,Beef Tacos,98,5.49,538.02
+836,TH-20,Myriam Bartozzi,Vegetable Fried Rice,87,4.99,434.13
+837,PG-CPK,Janel Rosberg,Memory Foam Mattress Topper,8,109.99,879.92
+838,CN-35,Annamarie Rawles,Dog Car Seat Cover,49,39.99,1959.51
+839,US-ND,Sigmund Veque,Organic Coconut Water,92,2.79,256.68
+840,DE-HE,Sophie Brimson,Cinnamon Spiced Almonds,11,5.99,65.89
+841,ES-CN,Justino Farrimond,Sweet Cherry Tomatoes,8,2.99,23.92
+842,PG-WHM,Lamont Aleksandrev,Classic Caesar Salad Kit,61,4.99,304.39
+843,US-OH,Hill Lemoir,LED Canopy Lights,85,29.99,2549.15
+844,US-NC,Emery Vasyukhnov,Fitness Tracker with Heart Rate Monitor,85,59.99,5099.15
+845,US-OR,Christine Bridgnell,Electric Griddle with Removable Plates,35,59.99,2099.65
+846,US-MI,Jeffry Klesel,Camping Tent,35,79.99,2799.65
+847,JP-21,Yale Fidgeon,Water Bottle with Built-in Fruit Infuser,44,18.99,835.56
+848,US-OH,Guthry Edmands,Sea Salt Caramel Popcorn,45,3.99,179.55
+849,LA-OU,Trenna Vella,Comfortable Jogger Pants,83,29.99,2489.17
+850,BR-PA,Moyra Quince,Phone Case,6,14.99,89.94
+851,ID-SN,Barb Lyard,Cacao Powder,15,4.49,67.35
+852,FR-H,Thomasa Risbrough,Canned Black Beans,2,1.29,2.58
+853,DE-BY,Wenonah Duddan,Adjustable Window Blind,78,49.99,3899.22
+854,PG-WPD,Hymie McClinton,Roasted Vegetable Medley,22,3.99,87.78
+855,BR-SP,Charley Bruyntjes,Coconut Lime Rice,10,2.99,29.9
+856,NI-AS,Halley Steadman,Peach Slices (canned),34,2.49,84.66
+857,US-AL,Eve Foran,Portable Air Purifier,69,69.99,4829.31
+858,CD-KA,Carney Dunk,Electric Knife,27,39.99,1079.73
+859,ZM-06,Otis Parlet,Kids' Science Experiment Kit,37,29.99,1109.63
+860,SO-TO,Milo Botly,Sweet BBQ Dipping Sauce,86,3.49,300.14
+861,US-NH,Elvira Dungate,Digital Kitchen Timer,16,14.99,239.84
+862,MY-06,Hammad Keilty,Cranberry Pecan Granola,95,3.99,379.05
+863,CD-KE,Caritta Brissenden,Pesto Pasta Salad,9,4.99,44.91
+864,US-IA,Batsheva Frances,Leather Wallet,67,49.99,3349.33
+865,BF-MOU,Rockwell Leiden,Smartphone Gimbal Stabilizer,41,89.99,3689.59
+866,TD-MK,Davon Kinghorn,Black Bean Spaghetti,87,3.99,347.13
+867,IT-57,Addison Randalston,Multi-Layer Food Steamer,45,39.99,1799.55
+868,CL-VS,Ginelle McComb,Pet Travel Carrier,10,39.99,399.9
+869,CD-KA,Armin Murrigan,Foot Spa Bath Massager,2,59.99,119.98
+870,ID-PB,Jeff Merwe,Mobile Workbench,14,199.99,2799.86
+871,CA-NB,Paulita Andreia,Wireless Printer,100,99.99,9999
+872,GB-SCT,Trix Ivoshin,Sparkling Blood Orange Soda,93,1.99,185.07
+873,US-KS,Torrence Test,Frozen Spinach,22,1.99,43.78
+874,US-PA,Johnath Norree,Fruit and Nut Energy Bites,14,2.99,41.86
+875,AU-QLD,Nell McAsgill,Peanut Butter Chocolate Chip Bars,74,4.59,339.66
+876,IT-21,Chloe Conti,Tahini,57,5.49,312.93
+877,ID-BE,Christal Hambrick,Mediterranean Couscous,34,3.59,122.06
+878,BR-RS,Jorgan Salleir,Multi-Tool,46,39.99,1839.54
+879,AU-VIC,Caty Perillo,Travel Jewelry Case,71,24.99,1774.29
+880,CO-HUI,Fleurette Shere,Organic Coconut Water,73,2.79,203.67
+881,US-MN,Danna Fairlam,Mashed Sweet Potatoes,53,3.99,211.47
+882,VE-F,Anne-corinne Trigwell,Fashionable Fanny Pack,51,24.99,1274.49
+883,PE-CUS,Adam Skydall,Electric Wax Warmer,93,22.99,2138.07
+884,AU-QLD,Rachel Hursey,Adjustable Laptop Stand,23,29.99,689.77
+885,UA-53,Brear Bagg,Miso Soup Starter,93,2.99,278.07
+886,SO-JH,Casi Avrahamov,Stylish Wireless Earbuds,8,59.99,479.92
+887,VN-34,Abdel Cancelier,Self-Watering Planters,82,49.99,4099.18
+888,PF-U-A,Elita Eymor,Portable Bluetooth Keyboard,51,39.99,2039.49
+889,PG-NSB,Ludvig Rookledge,Dishwasher Safe Cutting Board,4,22.99,91.96
+890,PH-NER,Panchito Dellenbrok,Rustic Italian Breads,27,3.99,107.73
+891,US-NY,Crissie Brevetor,Two-Tone Windbreaker,17,59.99,1019.83
+892,UA-32,Jody Innerstone,Organic Granola Cereal,17,5.99,101.83
+893,PG-WPD,Jeannette Pitrasso,Tennis Racket,22,89.99,1979.78
+894,CA-NT,Phillida Nisbet,Chocolate Dipped Fruit,42,5.99,251.58
+895,US-OR,Tatiana Ewington,Sweet Pea Hummus,73,4.29,313.17
+896,AU-VIC,Josee Markos,Pet Training Clicker,43,5.99,257.57
+897,MZ-Q,Kerry Windows,Workstation Laptop Stand,11,49.99,549.89
+898,PF-U-A,Jillayne Leivesley,Wine Decanter,96,34.99,3359.04
+899,AU-WA,Kerrill Hyams,Stainless Steel Water Pitcher,17,39.99,679.83
+900,PG-SAN,Jeri Anthiftle,Cooking Utensil Set,55,24.99,1374.45
+901,ID-KS,Rivkah Louiset,Trail Mix (Deluxe),17,4.59,78.03
+902,AU-WA,Merle Britch,Spicy Thai Chili Sauce,70,3.29,230.3
+903,US-AK,Glory Skaid,Trendy Bomber Jacket,74,69.99,5179.26
+904,BR-MG,Kurt Sandes,Zucchini,28,0.79,22.12
+905,CG-14,Kendrick Pauler,Children's Garden Tool Set,82,22.99,1885.18
+906,PA-6,Allen Sturte,Whole Grain Hamburger Buns,100,2.69,269
+907,ZA-EC,Herta Folley,Portable Pet Stroller,72,89.99,6479.28
+908,AU-NT,Val Wann,Wall-Mounted Bookshelf,67,39.99,2679.33
+909,CN-42,Thor Hasling,Almond Flour,64,5.99,383.36
+910,CL-TA,Sonya Paal,Pet Grooming Brush,61,19.99,1219.39
+911,US-KY,Theresita Bortolazzi,Classic Chicken Noodle Soup,98,3.49,342.02
+912,CG-7,Della Gavagan,Chic Jumpsuit,52,89.99,4679.48
+913,CN-65,Jephthah Milroy,Eco-Friendly Yoga Mat,82,39.99,3279.18
+914,CN-64,Georgianna McHaffy,Beef Stroganoff Meal Kit,78,12.99,1013.22
+915,UY-CL,Norry Gault,Collapsible Folding Chair,23,29.99,689.77
+916,ES-MU,Christyna Madgwich,Black Bean Salsa,33,3.49,115.17
+917,US-AZ,Antonie Arnot,Comfortable Bed Pillow,15,24.99,374.85
+918,LT-KL,Witty Drayn,Rechargeable Electric Toothbrush,33,49.99,1649.67
+919,MX-ROO,Denver Oxberry,Skincare Set,58,54.99,3189.42
+920,BR-MG,Addie Keighley,Reusable Coffee Filter,22,10.99,241.78
+921,IT-34,Berty Aaronsohn,Diced Tomatoes (canned),87,1.49,129.63
+922,CA-ON,Agosto Spurrior,Herbal Tea Variety Pack,68,4.99,339.32
+923,US-VA,Lilla Timbrell,Electric Wine Opener,11,29.99,329.89
+924,CA-BC,Ranee Vernalls,Savory Italian Herbs,95,2.99,284.05
+925,ZM-07,Celestyn Lamblot,Rustic Wooden Picture Frame,83,19.99,1659.17
+926,AU-NSW,Christos Faltin,Dill Pickle Chips,72,2.29,164.88
+927,IR-03,Hermy Omond,Smoky BBQ Jackfruit,71,4.99,354.29
+928,CA-MB,Benedicta Trawin,Himalayan Pink Salt,23,1.99,45.77
+929,PG-NPP,Noel Massei,Smashed Avocado with Lime,9,2.49,22.41
+930,US-MT,Anders Boshier,Backpack,44,49.99,2199.56
+931,GB-SCT,Rasia Vicary,Organic Sweet Potatoes,15,1.99,29.85
+932,US-AR,Patricia Balston,Cinnamon Roll Kit,100,6.89,689
+933,AU-NSW,Tracy Freer,Sweet Chili Thai Sauce,72,3.49,251.28
+934,YE-HD,Kassandra Kassman,Insulated Coffee Mug,63,24.99,1574.37
+935,IR-23,Olva Morde,Pork Chops,30,9.49,284.7
+936,PG-MPL,Jethro Franzolini,Peach Slices in Syrup,11,2.59,28.49
+937,NA-OT,Dov Guerrin,Electric Pressure Cooker,28,89.99,2519.72
+938,DK-85,Colet Tevlin,Leather Notebook Cover,26,29.99,779.74
+939,MY-13,Emmeline Clace,Portable Laptop Table,46,39.99,1839.54
+940,IN-MM,Franciskus Hoodlass,Air Mattress,96,49.99,4799.04
+941,US-CA,Marie-jeanne Condon,Himalayan Pink Salt,95,1.99,189.05
+942,GR-13,Alley Roelvink,Multi-Function Meat Tenderizer,58,19.99,1159.42
+943,AU-WA,Estella De Vaan,Hibiscus Herbal Tea,94,3.29,309.26
+944,US-ID,Riccardo Brandle,Organic Black Rice,86,3.59,308.74
+945,GT-AV,Marian Jeanes,Portable Bluetooth Keyboard,47,39.99,1879.53
+946,ID-SS,Byrann Janczyk,Travel Eye Mask with Ear Plugs,26,15.99,415.74
+947,CR-P,Aharon Bloss,Apple Cinnamon Instant Oatmeal,58,3.49,202.42
+948,PG-WBK,Arv Bodham,Slim Fit Chinos,56,54.99,3079.44
+949,US-IA,Shae Bizzey,Garam Masala Spice Blend,98,2.79,273.42
+950,US-TX,Amby Climson,Apple Juice,56,3.29,184.24
+951,NG-DE,Kippie Webby,Portable Folding Picnic Table,67,69.99,4689.33
+952,US-PA,Roana O'Hingerty,Rechargeable Electric Screwdriver,51,39.99,2039.49
+953,OM-DA,Daphna Ornillos,Bamboo Memory Foam Pillow,41,34.99,1434.59
+954,CA-BC,Michel Bertomieu,Luxury Bath Robe,1,49.99,49.99
+955,US-AR,Andonis Sabatini,Tailgating Set,10,89.99,899.9
+956,RU-ARK,Tobias Corrigan,Digital Drawing Tablet,22,79.99,1759.78
+957,US-WA,Huntley McCauley,Hibiscus Tea Bags,55,3.79,208.45
+958,RU-TA,Avrom Duggon,Fruit Infuser Water Bottle,95,15.99,1519.05
+959,US-TX,Dynah Sponton,Multi-Purpose Marine Rope,69,19.99,1379.31
+960,KE-700,Coralyn Pay,Smartwatch,5,199.99,999.95
+961,AU-WA,Jyoti Tesauro,Maple Bacon Potato Chips,20,2.89,57.8
+962,KR-41,Ana Dufty,Self-Watering Planters,62,49.99,3099.38
+963,BW-SE,Lilly Belmont,Stylish Wireless Earbuds,42,59.99,2519.58
+964,AU-NSW,Pearl Whisby,Peanut Butter Banana Smoothie Mix,47,4.49,211.03
+965,US-NM,Kile Meys,Stainless Steel Grater,16,14.99,239.84
+966,CN-65,Bianka Bonome,Gaming Headset,27,69.99,1889.73
+967,US-AK,Yovonnda McGenis,Hand Mixer,90,29.99,2699.1
+968,CL-CO,Hettie Chudleigh,Teriyaki Salmon Fillets,20,9.99,199.8
+969,AU-NSW,Agatha Warrillow,Dog Waste Bag Dispenser,91,6.99,636.09
+970,RO-CS,Francois Gerritsma,Teriyaki Sauce,59,2.99,176.41
+971,CN-52,Kristos Estick,Cauliflower Gnocchi,93,3.59,333.87
+972,US-CO,Euell Bettis,Baked Falafel Balls,25,5.99,149.75
+973,VU-SAM,Aldin MacCard,Butternut Squash Ravioli,36,6.29,226.44
+974,PF-U-A,Bari De Giorgio,Chili Garlic Sauce,4,2.49,9.96
+975,CF-VR,Gery Trundler,Chocolate Fudge Brownie Mix,9,2.99,26.91
+976,TN-83,Brantley Karpushkin,Self-Cleaning Water Bottle,37,49.99,1849.63
+977,ID-KU,Kenny Firks,Savory Mushroom Risotto,40,6.49,259.6
+978,SL-N,Maje Leddy,Travel Jewelry Organizer,98,19.99,1959.02
+979,UY-MA,Harley Halliberton,Portable Air Compressor,62,44.99,2789.38
+980,YE-HD,Georgena Bellie,Fashionable Fanny Pack,13,24.99,324.87
+981,US-PA,Sig Caban,Outdoor Adventure Kit,39,89.99,3509.61
+982,US-ND,Leesa Buckham,Dog Frisbee Toy,76,10.99,835.24
+983,BJ-AL,Coleen Littlekit,Spicy Avocado Salsa,55,4.49,246.95
+984,US-NC,Ajay Woodford,Salsa Verde,71,3.49,247.79
+985,CF-UK,Tonia Rafter,Children's Backpack,77,29.99,2309.23
+986,AU-WA,Wood Loxly,Wireless HDMI Receiver,59,49.99,2949.41
+987,MX-COL,Darbie Downing,Over-the-Door Shoe Organizer,80,22.99,1839.2
+988,AU-QLD,Timothea Lesser,Kids' Building Blocks,29,19.99,579.71
+989,CH-TI,Shandeigh Carde,Mushrooms,7,2.99,20.93
+990,FR-V,Douglas Graith,Chino Shorts,75,34.99,2624.25
+991,GR-84,Thatcher Conville,Thai Green Curry Paste,72,2.49,179.28
+992,GA-8,Ringo Slimme,Sliced Provolone Cheese,59,3.99,235.41
+993,CU-02,Elwin Cuddon,Pepperoni Pizza Rolls,87,6.99,608.13
+994,US-WI,Tabbatha Cary,Coconut Milk,68,2.49,169.32
+995,US-PA,Ilsa Gillinghams,Beet Salad,7,3.99,27.93
+996,ET-AA,Clare Jery,Maple Almond Granola,76,5.49,417.24
+997,KE-400,Elli Howard - Gater,Compact Pop-Up Tent,75,69.99,5249.25
+998,US-NY,Aubert Stayte,Ginger Turmeric Tea,66,3.49,230.34
+999,VE-O,Cass Collabine,Portable Solar Generator,38,399.99,15199.62
+1000,ID-PA,Holly Bernadon,Cocktail Shaker Set,85,29.99,2549.15
