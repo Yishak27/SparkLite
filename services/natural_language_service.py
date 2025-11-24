@@ -61,7 +61,7 @@ class NaturalLanguageQuery:
     def add_assistant_response(self,response,result_data):
         st.session_state.chat_messages.append({"role": "assistant", "content": response})
         with st.chat_message("assistant"):
-            st.write(response)            
+            # st.write(response)            
             if result_data:
                 st.write(result_data["display"])                
                 if result_data["type"] == "dataframe":
