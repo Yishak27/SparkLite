@@ -24,12 +24,17 @@ if uploaded_file is not None:
     else :
         st.session_state.uploaded_data = uploaded_file.read()
         st.session_state.file_name = uploaded_file.name
-# st.write("file uploaded", st.session_state.file_name)
-# st.write("file data", st.session_state.uploaded_data)
+        
 if st.session_state.uploaded_data is not None:
     try:
-        df = pd.read_csv(io.BytesIO(st.session_state.uploaded_data))
+        if st.session_state.file_name.endswith(".csv"):
+            df = pd.read_csv(io.BytesIO(st.session_state.uploaded_data))
+            st.line_chart(df, x="product", y="total_price") 
+        elif st.session_state.file_name.endswith(".json"):
+            df = pd.read_json(io.BytesIO(st.session_state.uploaded_data))
+            st.line_chart(df, x="product", y="total_price") 
+        else:
+            st.error("Unsupported file format.")
     except Exception as e:
         print('erro reading file:', e)
         st.error(f"Error reading file:")
-    st.line_chart(df, x="product", y="total_price") 
