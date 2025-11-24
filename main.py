@@ -83,7 +83,8 @@ if st.session_state.uploaded_data is not None:
     if user_query:
         with st.chat_message("assistant"):
             with st.spinner("Analyzing your question..."):
-                placeholder_response = "AI response for the give question will be done here...."
+                print('user promt',user_query)
+                placeholder_response = query_interface.process_user_request(user_query,st.session_state.uploaded_data)
                 query_interface.add_assistant_response(placeholder_response)
 else:
     st.info("Please upload a data file first to start asking questions.")
