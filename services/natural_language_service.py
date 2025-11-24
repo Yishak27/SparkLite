@@ -33,7 +33,10 @@ class NaturalLanguageQuery:
             print("generated", generated)
             with st.expander("View Generated Code"):
                 st.code(generated, language="python")
-            return generated
+            with st.spinner("Executing analysis..."):
+                result, error = code_generation.execute_code(self,generated, df)
+                print('code execution,', result, error)
+            return result,generated
         except Exception as e:
             print("error occur",e)
 

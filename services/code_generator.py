@@ -48,8 +48,37 @@ Important: Only output the code, no other text.
         except Exception as e:
             print('error in code generation, ', e)
             return "Unable to generate code." 
-    def execute_code(self, code):
-        return "executed"
+    def execute_code(self, code,df):
+        try:
+            local_vars = {
+                'df': df.copy(), 
+                'pd': pd,
+                'plt': None,
+                'seaborn': None,
+                'plotly': None
+            }
+            import matplotlib.pyplot as plt
+            import seaborn
+            import plotly.express as px
+            import plotly.graph_objects as go
+
+            local_vars['plt'] = plt
+            local_vars['seaborn'] = seaborn
+            local_vars['px'] = px
+            local_vars['go'] = go
+            exec(code, {}, local_vars)
+            
+            # print('executed result.', local_vars)
+            if 'result' in local_vars:
+                result = local_vars['result']
+                print('result',result)
+                return result, None
+            else:
+                return None, "No 'result' variable found in the executed code."
+            
+        except Exception as e:
+            print('execution code error,',e)
+            return "Error on execution the code."
     def format_executed_code(self):
         return "format executed result"
     
