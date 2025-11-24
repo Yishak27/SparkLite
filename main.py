@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import json
+from services.natural_language_service import NaturalLanguageQuery
 
 st.set_page_config(
     page_title="SparkLite AI",
@@ -73,3 +74,10 @@ if uploaded_file is not None:
             st.error(f"Error reading file: {str(e)}")
             st.session_state.uploaded_data = None
             st.session_state.file_name = None
+
+if st.session_state.uploaded_data is not None:
+    query_interface = NaturalLanguageQuery() 
+    query_interface.display_chat_interface()
+    
+else:
+    st.info("Please upload a data file first to start asking questions.")
