@@ -19,7 +19,17 @@ class CodeGenerator:
             You have access to a pandas dataframe variable named `df`.
             The dataframe has these columns: {df}
             User Question: "{user_query}"
-            Write me python code. Just the code only.
+            
+                Instructions:
+1. Write Python code using pandas to answer the question.
+2. Assign the final result to a variable named `result`.
+3. Output ONLY the python code without any explanations.
+4. Use only these libraries: pandas, matplotlib, seaborn, plotly
+5. If you need to create a visualization, use plotly and assign to `fig`.
+6. Format: ```python\n# your code here\n```
+
+Important: Only output the code, no other text.
+
             """ 
             result = self.client.chat.completions.create(
                 model="llama-3.1-8b-instant",
