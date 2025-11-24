@@ -24,19 +24,28 @@ class NaturalLanguageQuery:
         for message in st.session_state.chat_messages:
             with st.chat_message(message["role"]):
                 st.write(message["content"])
-    
+    def get_dataframe_info(self, df):
+        columns_info = []
+        for col in df.columns:
+            dtype = str(df[col].dtype)
+            columns_info.append(f"{col} ({dtype})")
+        return ", ".join(columns_info)
+
     def process_user_request(self, user_query,df):
         try:
             code_generation = CodeGenerator
+            df_info = self.get_dataframe_info(df)
             # with st.spinner("generating analysis code"):
-            generated = code_generation.generate_code(self,user_query,df)
+            generated = code_generation.generate_code(self,user_query,df_info)
             print("generated", generated)
             with st.expander("View Generated Code"):
                 st.code(generated, language="python")
             with st.spinner("Executing analysis..."):
                 result, error = code_generation.execute_code(self,generated, df)
                 print('code execution,', result, error)
-            return result,generated
+            formatted_result = code_generation.format_executed_code(self,result, error)
+            print('formatttttt.........', formatted_result)
+            return formatted_result,generated
         except Exception as e:
             print("error occur",e)
 
@@ -49,8 +58,16 @@ class NaturalLanguageQuery:
             return user_query
         return None
     
-    def add_assistant_response(self, response):
-        st.session_state.chat_messages.append({"role": "assistant", "content": response})        
+    def add_assistant_response(self,response,result_data):
+        st.session_state.chat_messages.append({"role": "assistant", "content": response})
         with st.chat_message("assistant"):
-            st.write(response)
+            st.write(response)            
+            if result_data:
+                st.write(result_data["display"])                
+                if result_data["type"] == "dataframe":
+                    st.dataframe(result_data["content"])
+                elif result_data["type"] == "error":
+                    st.error(result_data["content"])
+                elif result_data["type"] in ["number", "text", "unknown"]:
+                    st.info(result_data["content"])
 

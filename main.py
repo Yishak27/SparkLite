@@ -84,7 +84,16 @@ if st.session_state.uploaded_data is not None:
         with st.chat_message("assistant"):
             with st.spinner("Analyzing your question..."):
                 print('user promt',user_query)
-                placeholder_response = query_interface.process_user_request(user_query,st.session_state.uploaded_data)
-                query_interface.add_assistant_response(placeholder_response)
+                result, generated_code = query_interface.process_user_request(user_query,st.session_state.uploaded_data)
+                if result["type"] == "error":
+                    response_message = "I encountered an error while analyzing your data."
+                else:
+                    response_message = "Here's the result of my analysis:"
+                print('respons------------- last one------,', response_message, "result,", result)
+                query_interface.add_assistant_response(response_message,result)
 else:
     st.info("Please upload a data file first to start asking questions.")
+
+
+
+    

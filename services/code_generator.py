@@ -48,6 +48,8 @@ Important: Only output the code, no other text.
         except Exception as e:
             print('error in code generation, ', e)
             return "Unable to generate code." 
+        
+
     def execute_code(self, code,df):
         try:
             local_vars = {
@@ -79,6 +81,41 @@ Important: Only output the code, no other text.
         except Exception as e:
             print('execution code error,',e)
             return "Error on execution the code."
-    def format_executed_code(self):
-        return "format executed result"
-    
+    def format_executed_code(self, result, error):
+        print('format code,', result, error)
+        if error:
+            return {
+                "type": "error",
+                "content": error,
+                "display": f"Error* {error}"
+            } 
+        if result is None:
+            return {
+                "type": "empty",
+                "content": None,
+                "display": "No result returned from the analysis."
+            }
+        elif isinstance(result, pd.DataFrame):
+            return {
+                "type": "dataframe",
+                "content": result,
+                "display": "**Analysis Result (DataFrame):**"
+            }
+        elif isinstance(result, (int, float)):
+            return {
+                "type": "number",
+                "content": result,
+                "display": f"Result* {result}"
+            }
+        elif isinstance(result, str):
+            return {
+                "type": "text",
+                "content": result,
+                "display": f"**Result:** {result}"
+            }
+        else:
+            return {
+                "type": "unknown",
+                "content": str(result),
+                "display": f"**Result:** {str(result)}"
+            }
