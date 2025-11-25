@@ -102,7 +102,7 @@ if st.session_state.uploaded_data is not None:
                 else:
                     response_message = "Here's the result of my analysis:"
                 # print('respons------------- last one------,', response_message, "result,", result)
-                query_interface.add_assistant_response(response_message,result)
+                query_interface.add_assistant_response(response_message, result, generated_code)
 else:
     st.info("Please upload a data file first to start asking questions.")
 

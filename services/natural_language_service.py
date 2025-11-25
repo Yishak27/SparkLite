@@ -36,6 +36,11 @@ class NaturalLanguageQuery:
                         result_data = message["result_data"]
                         st.write(message["content"])
                         
+                        # Show generated code if available
+                        if result_data.get("generated_code"):
+                            with st.expander("View Generated Code"):
+                                st.code(result_data["generated_code"], language="python")
+                        
                         if result_data["type"] == "dataframe":
                             st.dataframe(result_data["content"])
                         elif result_data["type"] == "error":
@@ -127,7 +132,7 @@ class NaturalLanguageQuery:
             return user_query
         return None
     
-    def add_assistant_response(self, response, result_data):
+    def add_assistant_response(self, response, result_data, generated_code=None):
         if result_data and result_data["type"] in ["developer_info", "unrelated_question", "chat_history"]:
             st.session_state.chat_messages.append({
                 "role": "assistant", 
@@ -135,6 +140,9 @@ class NaturalLanguageQuery:
                 "type": "text_only"
             })
         else:
+            if generated_code and result_data:
+                result_data["generated_code"] = generated_code
+            
             st.session_state.chat_messages.append({
                 "role": "assistant", 
                 "content": response,
