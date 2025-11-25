@@ -25,6 +25,7 @@ class NaturalLanguageQuery:
                 'preferences': [],
                 'previous_analyses': []
             }
+
             
     def display_chat_interface(self):
         st.subheader("Ask Questions About the data")        
@@ -36,7 +37,9 @@ class NaturalLanguageQuery:
         col1, col2, col3 = st.columns([2, 1, 1])
         with col2:
             if st.button("View Chat History", help="See what AI remembers"):
-                self._show_memory_sidebar()
+                # Add a chat history request to trigger the response
+                st.session_state.chat_messages.append({"role": "user", "content": "Show chat history"})
+                st.rerun()
         with col3:
             if st.button("Clear History", help="Clear conversation history"):
                 st.session_state.chat_messages = []
@@ -63,6 +66,10 @@ class NaturalLanguageQuery:
             
             if self._is_developer_question(user_query):
                 return self._handle_developer_question(user_query), None
+            
+            # Check if user is asking to see chat history
+            if self._is_chat_history_request(user_query):
+                return self._handle_chat_history_request(), None
             
             if not self._is_data_analysis_question(user_query, df):
                 return self._handle_unrelated_question(user_query), None
@@ -110,6 +117,8 @@ class NaturalLanguageQuery:
                 if result_data["type"] == "developer_info":
                     st.markdown(result_data["content"])
                 elif result_data["type"] == "unrelated_question":
+                    st.markdown(result_data["content"])
+                elif result_data["type"] == "chat_history":
                     st.markdown(result_data["content"])
                 else:
                     st.write(result_data["display"])                
@@ -180,28 +189,7 @@ class NaturalLanguageQuery:
         if len(st.session_state.context_memory['previous_analyses']) > 10:
             st.session_state.context_memory['previous_analyses'] = st.session_state.context_memory['previous_analyses'][-10:]
     
-    def _show_memory_sidebar(self):
-        with st.sidebar:
-            st.header("AI Memory")
-            
-            if st.session_state.conversation_history:
-                st.subheader("Recent Conversation")
-                for msg in st.session_state.conversation_history[-5:]:
-                    role_icon = "👤" if msg["role"] == "user" else "🤖"
-                    st.text(f"{role_icon} {msg['content'][:100]}...")
-            
-            if st.session_state.context_memory['corrections']:
-                st.subheader("Corrections Remembered")
-                for correction in st.session_state.context_memory['corrections'][-3:]:
-                    st.text(f"{correction['correction'][:80]}...")
-            
-            if st.session_state.context_memory['previous_analyses']:
-                st.subheader("Previous Analyses")
-                for analysis in st.session_state.context_memory['previous_analyses'][-3:]:
-                    st.text(f"{analysis['query'][:60]}... ({analysis['result_type']})")
-            
-            if st.button("Close Memory View"):
-                st.rerun()
+
     
     def _is_developer_question(self, user_query):
         developer_keywords = [
@@ -327,6 +315,76 @@ class NaturalLanguageQuery:
             "type": "unrelated_question",
             "content": response_text,
             "display": response_text,
+            "visualization": None,
+            "narrative": None
+        }
+    
+    def _is_chat_history_request(self, user_query):
+        """Detect if user is asking to see chat history"""
+        history_keywords = [
+            "show history", "chat history", "conversation history", "show chat", "view history",
+            "what did we talk about", "previous conversation", "show memory", "what do you remember",
+            "our conversation", "chat log", "message history", "show messages", "previous messages"
+        ]
+        
+        query_lower = user_query.lower()
+        return any(keyword in query_lower for keyword in history_keywords)
+    
+    def _handle_chat_history_request(self):
+        """Handle requests to view chat history"""
+        # Build the chat history content
+        history_content = " **AI Memory & Chat History**\n\n"
+        
+        # Recent conversation history
+        if st.session_state.conversation_history:
+            history_content += "###  Recent Conversation (Last 10 messages)\n"
+            recent_messages = st.session_state.conversation_history[-10:]
+            for i, msg in enumerate(recent_messages, 1):
+                role_icon = "👤" if msg["role"] == "user" else "🤖"
+                timestamp = msg.get("timestamp", "")
+                if timestamp:
+                    try:
+                        dt = datetime.datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
+                        time_str = dt.strftime("%H:%M")
+                    except:
+                        time_str = ""
+                else:
+                    time_str = ""
+                
+                content_preview = msg['content'][:150] + ("..." if len(msg['content']) > 150 else "")
+                history_content += f"{role_icon} **Message {i}** {time_str}\n"
+                history_content += f"   {content_preview}\n\n"
+        
+        # Corrections remembered
+        if st.session_state.context_memory['corrections']:
+            history_content += "### ❌ Corrections Remembered\n"
+            for i, correction in enumerate(st.session_state.context_memory['corrections'][-5:], 1):
+                correction_preview = correction['correction'][:100] + ("..." if len(correction['correction']) > 100 else "")
+                history_content += f"{i}. {correction_preview}\n"
+            history_content += "\n"
+        
+        # Previous analyses
+        if st.session_state.context_memory['previous_analyses']:
+            history_content += "### 📊 Previous Analyses\n"
+            for i, analysis in enumerate(st.session_state.context_memory['previous_analyses'][-5:], 1):
+                query_preview = analysis['query'][:80] + ("..." if len(analysis['query']) > 80 else "")
+                history_content += f"{i}. **{analysis['result_type']}**: {query_preview}\n"
+            history_content += "\n"
+        
+        # Summary stats
+        history_content += "### 📈 Memory Statistics\n"
+        history_content += f"- **Total Messages**: {len(st.session_state.conversation_history)}\n"
+        history_content += f"- **Corrections Made**: {len(st.session_state.context_memory['corrections'])}\n"
+        history_content += f"- **Analyses Performed**: {len(st.session_state.context_memory['previous_analyses'])}\n\n"
+        
+        history_content += "💡 *This information helps me provide better, context-aware responses based on our conversation!*"
+        
+        self._add_to_conversation_history(history_content, "assistant")
+        
+        return {
+            "type": "chat_history",
+            "content": history_content,
+            "display": history_content,
             "visualization": None,
             "narrative": None
         }

@@ -83,6 +83,7 @@ if uploaded_file is not None:
 if st.session_state.uploaded_data is not None:
     query_interface = NaturalLanguageQuery() 
     query_interface.display_chat_interface()
+    
     user_query = query_interface.get_user_query()
     
     if user_query:
@@ -96,6 +97,8 @@ if st.session_state.uploaded_data is not None:
                     response_message = "" 
                 elif result["type"] == "unrelated_question":
                     response_message = "" 
+                elif result["type"] == "chat_history":
+                    response_message = ""
                 else:
                     response_message = "Here's the result of my analysis:"
                 # print('respons------------- last one------,', response_message, "result,", result)
