@@ -100,7 +100,20 @@ class AutoVisualization:
 
 
     def _create_line_chart(self, result):
-        return " again line chart"
+        if isinstance(result, pd.DataFrame):
+            numeric_cols = result.select_dtypes(include=['number']).columns
+            date_cols = result.select_dtypes(include=['datetime64']).columns
+            
+            if len(date_cols) > 0 and len(numeric_cols) > 0:
+                x_col = date_cols[0]
+                y_col = numeric_cols[0]
+                fig = px.line(result, x=x_col, y=y_col, title=f"{y_col} over Time")
+            else:
+                fig = px.line(result, title="Trend Analysis")            
+        elif isinstance(result, pd.Series):
+            fig = px.line(y=result.values, title=f"Trend of {result.name}")
+        
+        return fig
     def _create_pie_chart(self, result):
         return "pie chart"
     
