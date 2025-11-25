@@ -89,7 +89,7 @@ if st.session_state.uploaded_data is not None:
                     response_message = "I encountered an error while analyzing your data."
                 else:
                     response_message = "Here's the result of my analysis:"
-                print('respons------------- last one------,', response_message, "result,", result)
+                # print('respons------------- last one------,', response_message, "result,", result)
                 query_interface.add_assistant_response(response_message,result)
 else:
     st.info("Please upload a data file first to start asking questions.")
