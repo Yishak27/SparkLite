@@ -36,7 +36,7 @@ class NaturalLanguageQuery:
                         
                         expander_title = f"Analysis Results"
                         if result_data.get("type"):
-                            expander_title += f" ({result_data['type'].title()})"
+                            # expander_title += f" ({result_data['type'].title()})"
                         
                         with st.expander(expander_title, expanded=True):
                             st.write(message["content"])                            
@@ -190,7 +190,7 @@ class NaturalLanguageQuery:
                     
                     expander_title = f"Analysis Results"
                     if result_data.get("type"):
-                        expander_title += f" ({result_data['type'].title()})"
+                        # expander_title += f" ({result_data['type'].title()})"
                     
                     with st.expander(expander_title, expanded=True):
                         st.write(result_data["display"])                
