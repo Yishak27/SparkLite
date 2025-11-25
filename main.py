@@ -6,11 +6,11 @@ from services.natural_language_service import NaturalLanguageQuery
 st.set_page_config(
     page_title="SparkLite AI",
     layout="wide",
-    page_icon=">"
+    page_icon=":search"
 )
 
 st.title("SparkLite AI")
-st.header("This is a simple AI agent that do sales analysis.")
+st.subheader("AI agent that analyis sales data and generate a report.")
 
 max_file_size = 20 * 1024 * 1024 
 
@@ -19,7 +19,12 @@ if 'uploaded_data' not in st.session_state:
 if 'file_name' not in st.session_state:
     st.session_state.file_name = None
 
-uploaded_file = st.file_uploader("Upload a CSV or JSON file", type=["csv","json"], key="uploaded_file")
+uploaded_file = st.file_uploader(
+    "Upload your data file - CSV or JSON format (Maximum size: 20MB)", 
+    type=["csv","json"], 
+    help=None,
+    key="uploaded_file"
+)
 
 def display_data_profile(df):
     if df is None:
