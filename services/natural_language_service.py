@@ -61,16 +61,17 @@ class NaturalLanguageQuery:
             self._add_to_conversation_history(user_query, "user")            
             self._detect_and_store_corrections(user_query)
             
-            # Check if question is about developer instead of data
             if self._is_developer_question(user_query):
                 return self._handle_developer_question(user_query), None
+            
+            if not self._is_data_analysis_question(user_query, df):
+                return self._handle_unrelated_question(user_query), None
             
             code_generation = CodeGenerator
             df_info = self.get_dataframe_info(df)
             
             context = self._build_conversation_context()
             
-            # Show context indicator if there's relevant history
             if context['recent_messages'] or context['corrections'] or context['previous_analyses']:
                 st.info("Using conversation history to provide better results")
             
@@ -107,6 +108,8 @@ class NaturalLanguageQuery:
         with st.chat_message("assistant"):
             if result_data:
                 if result_data["type"] == "developer_info":
+                    st.markdown(result_data["content"])
+                elif result_data["type"] == "unrelated_question":
                     st.markdown(result_data["content"])
                 else:
                     st.write(result_data["display"])                
@@ -239,6 +242,89 @@ class NaturalLanguageQuery:
         
         return {
             "type": "developer_info",
+            "content": response_text,
+            "display": response_text,
+            "visualization": None,
+            "narrative": None
+        }
+    
+    def _is_data_analysis_question(self, user_query, df):
+        query_lower = user_query.lower()
+        
+        data_keywords = [
+            "show", "display", "analyze", "analysis", "calculate", "count", "sum", "average", "mean",
+            "total", "maximum", "minimum", "filter", "group", "sort", "chart", "graph", "plot",
+            "visualize", "trend", "pattern", "correlation", "distribution", "statistics", "stats",
+            "data", "dataset", "table", "column", "row", "value", "sales", "revenue", "profit",
+            "customer", "product", "region", "category", "date", "time", "period", "month", "year",
+        ]
+        
+        column_keywords = []
+        if df is not None:
+            column_keywords = [col.lower() for col in df.columns]
+        
+        has_data_keywords = any(keyword in query_lower for keyword in data_keywords)
+        has_column_keywords = any(keyword in query_lower for keyword in column_keywords)
+        
+        unrelated_keywords = [
+            "weather", "news", "politics", "sports", "entertainment", "music", "movie", "book",
+            "recipe", "cooking", "travel", "hotel", "flight", "restaurant", "shopping", "fashion",
+            "health", "medicine", "doctor", "hospital", "school", "education", "university",
+            "job", "career", "salary", "interview", "resume", "dating", "relationship", "love",
+            "game", "gaming", "video game", "social media", "facebook", "twitter", "instagram",
+            "cryptocurrency", "bitcoin", "stock market", "investment", "real estate", "car", "vehicle",
+            "technology news", "smartphone", "computer hardware", "software review", "app recommendation"
+        ]
+        
+        has_unrelated_keywords = any(keyword in query_lower for keyword in unrelated_keywords)
+        
+        simple_questions = [
+            "hello", "hi", "how are you", "what's up", "good morning", "good afternoon", "good evening",
+            "thank you", "thanks", "bye", "goodbye", "see you", "what can you do", "help me",
+            "what is", "tell me about", "explain", "define","yoo","what","meaning?","no","yes","ofcourse",
+            "who","by","ai"
+        ]
+        
+        is_simple_question = any(question in query_lower for question in simple_questions)
+        
+        if has_unrelated_keywords:
+            return False
+        
+        if is_simple_question and not (has_data_keywords or has_column_keywords):
+            return False
+        
+        if has_data_keywords or has_column_keywords:
+            return True
+        
+        return True
+    
+    def _handle_unrelated_question(self, user_query):
+        """Handle questions that are not related to data analysis"""
+        response_text = """
+        **I don't understand the question**
+        
+        I'm SparkLite AI, designed specifically to analyze sales data and generate reports. I can help you with:
+        
+        **Data Analysis Tasks:**
+        - Show sales trends and patterns
+        - Calculate totals, averages, and statistics
+        - Filter and group data by different criteria
+        - Create visualizations and charts
+        - Generate summaries and insights
+        
+        **Example Questions:**
+        - "Show me total sales by region"
+        - "What's the average revenue per customer?"
+        - "Display sales trends over time"
+        - "Which products are performing best?"
+        
+        Please ask a question related to your uploaded data, and I'll be happy to help with the analysis!
+        """
+        
+        self._add_to_conversation_history(response_text, "assistant")
+        
+        return {
+            "type": "unrelated_question",
             "content": response_text,
             "display": response_text,
             "visualization": None,

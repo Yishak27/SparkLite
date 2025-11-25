@@ -93,7 +93,9 @@ if st.session_state.uploaded_data is not None:
                 if result["type"] == "error":
                     response_message = "I encountered an error while analyzing the data."
                 elif result["type"] == "developer_info":
-                    response_message = ""  # Developer info handles its own display
+                    response_message = "" 
+                elif result["type"] == "unrelated_question":
+                    response_message = "" 
                 else:
                     response_message = "Here's the result of my analysis:"
                 # print('respons------------- last one------,', response_message, "result,", result)
