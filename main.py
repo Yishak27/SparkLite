@@ -9,6 +9,51 @@ st.set_page_config(
     page_icon=":search"
 )
 
+st.markdown("""
+<style>
+    .footer {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 50px;
+        color: #666;
+        font-size: 14px;
+    }
+    
+    .footer a {
+        color: #1f77b4;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .footer a:hover {
+        color: #0d5aa7;
+        text-decoration: underline;
+    }
+    
+    .footer-brand {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .footer-features {
+        font-size: 12px;
+        margin: 10px 0;
+        color: #555;
+    }
+    
+    .footer-copyright {
+        font-size: 11px;
+        color: #999;
+        margin-top: 5px;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 st.title("SparkLite AI")
 st.subheader("AI agent that analyis sales data and generate a report.")
 
@@ -107,5 +152,19 @@ else:
     st.info("Please upload a data file first to start asking questions.")
 
 
-
-    
+st.markdown("---")
+st.markdown(
+    """
+    <div class='footer'>
+        <div class='footer-brand'>SparkLite AI</div>
+        <div style='margin: 10px 0;'>
+            Developed by <a href='https://ermiyas.dev' target='_blank'>Ermiyas</a> | 
+            Contact: <a href='mailto:inbox@ermiyas.dev'>inbox@ermiyas.dev</a>
+        </div>
+        <div class='footer-copyright'>
+            © 2025 SparkLite AI. All rights reserved.
+        </div>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
