@@ -5,6 +5,7 @@ import openai
 from dotenv import load_dotenv
 from .code_generator import CodeGenerator
 from .visualization import AutoVisualization
+# from .loader import LoaderComponent
 
 load_dotenv()
 OPEN_API_KEY = os.getenv("OPEN_AI_KEY")
