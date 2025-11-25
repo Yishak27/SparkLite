@@ -17,7 +17,7 @@ class NaturalLanguageQuery:
             st.session_state.chat_messages = []
             
     def display_chat_interface(self):
-        st.subheader("Ask Questions About Your Data")     
+        st.subheader("Ask Questions About the data")     
         if st.session_state.chat_messages is not None:
             for message in st.session_state.chat_messages:
                 with st.chat_message(message["role"]):
@@ -50,7 +50,7 @@ class NaturalLanguageQuery:
             print("error occur",e)
 
     def get_user_query(self):
-        user_query = st.chat_input("Ask a question about your data...")        
+        user_query = st.chat_input("Ask a question about the data...")        
         if user_query:
             st.session_state.chat_messages.append({"role": "user", "content": user_query})
             with st.chat_message("user"):
@@ -74,8 +74,9 @@ class NaturalLanguageQuery:
                 if result_data.get("visualization"):
                     st.subheader("Visualized Data")
                     st.plotly_chart(result_data["visualization"], width='content')
-                    st.caption("Automatic visualization generated based on your data")
+                    st.caption("Automatic visualization generated based on given data")
 
                 # if there is a naration show that naration
                 if result_data.get("narrative"):
-                    st.info(f"Insight: {result_data['narrative']}")
+                    st.subheader("Summary")
+                    st.info({result_data['narrative']})

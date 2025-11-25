@@ -18,8 +18,22 @@ class NarationSummary:
             else:
                 result_description = f"The result: {str(result)}"
             
-            prompt = "Write exactly two sentences that explain what this data shows. Be specific and mention numbers or patterns."
-            
+            prompt = f"""
+                    Original user question: "{user_query}"
+
+                    Data context: The dataset has {len(df)} rows and {len(df.columns)} columns.
+
+                    Analysis result: {result_description}
+
+                    Write exactly two sentences that explain what this data shows. Be specific and mention numbers or patterns.
+
+                    First sentence: State the main finding.
+                    Second sentence: Provide context or explanation.
+
+                    Example: "Sales peaked in Q3 with a 40% increase compared to previous quarters. This spike was primarily driven by increased marketing activity and new product launches."
+
+                    Your response:
+                    """
             response = ai.safe_completion(
                 model="llama-3.1-8b-instant",
                 messages=[{"role": "user", "content": prompt}],

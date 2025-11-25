@@ -82,11 +82,11 @@ if st.session_state.uploaded_data is not None:
     
     if user_query:
         with st.chat_message("assistant"):
-            with st.spinner("Analyzing your question..."):
+            with st.spinner("Thinking..."):
                 print('user promt',user_query)
                 result, generated_code = query_interface.process_user_request(user_query,st.session_state.uploaded_data)
                 if result["type"] == "error":
-                    response_message = "I encountered an error while analyzing your data."
+                    response_message = "I encountered an error while analyzing the data."
                 else:
                     response_message = "Here's the result of my analysis:"
                 # print('respons------------- last one------,', response_message, "result,", result)
