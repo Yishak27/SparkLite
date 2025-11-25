@@ -18,11 +18,11 @@ if 'uploaded_data' not in st.session_state:
     st.session_state.uploaded_data = None
 if 'file_name' not in st.session_state:
     st.session_state.file_name = None
-
+    
 uploaded_file = st.file_uploader(
-    "Upload your data file - CSV or JSON format (Maximum size: 20MB)", 
-    type=["csv","json"], 
-    help=None,
+    type=["csv", "json"],
+    label="Upload your data file - CSV or JSON format (Maximum size: 20MB)",
+    accept_multiple_files=False,
     key="uploaded_file"
 )
 
