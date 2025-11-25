@@ -34,11 +34,11 @@ class NaturalLanguageQuery:
                     if message["role"] == "assistant" and message.get("type") == "analysis" and message.get("result_data"):
                         result_data = message["result_data"]
                         
-                        expander_title = f"Analysis Results"
-                        if result_data.get("type"):
+                        # expander_title = f"Analysis Results"
+                        # if result_data.get("type"):
                             # expander_title += f" ({result_data['type'].title()})"
                         
-                        with st.expander(expander_title, expanded=True):
+                        with st.expander("Analysis Results", expanded=True):
                             st.write(message["content"])                            
                             # Show generated code if available
                             if result_data.get("generated_code"):
@@ -188,11 +188,11 @@ class NaturalLanguageQuery:
                         st.markdown(result_data["content"])
                 else:
                     
-                    expander_title = f"Analysis Results"
-                    if result_data.get("type"):
+                    # expander_title = f"Analysis Results"
+                    # if result_data.get("type"):
                         # expander_title += f" ({result_data['type'].title()})"
                     
-                    with st.expander(expander_title, expanded=True):
+                    with st.expander("Analysis Results", expanded=True):
                         st.write(result_data["display"])                
                         if result_data["type"] == "dataframe":
                             st.dataframe(result_data["content"])
