@@ -32,15 +32,32 @@ class NaturalLanguageQuery:
         if st.session_state.chat_messages is not None:
             for message in st.session_state.chat_messages:
                 with st.chat_message(message["role"]):
-                    st.write(message["content"])
-            # Add  buttons to controll the chat history,,
-        col1, col2, col3 = st.columns([2, 1, 1])
+                    if message["role"] == "assistant" and message.get("type") == "analysis" and message.get("result_data"):
+                        result_data = message["result_data"]
+                        st.write(message["content"])
+                        
+                        if result_data["type"] == "dataframe":
+                            st.dataframe(result_data["content"])
+                        elif result_data["type"] == "error":
+                            st.error(result_data["content"])
+                        elif result_data["type"] in ["number", "text", "unknown"]:
+                            st.info(result_data["content"])
+
+                        if result_data.get("visualization"):
+                            st.subheader("Visualized Data")
+                            st.plotly_chart(result_data["visualization"], use_container_width=True)
+                            st.caption("Automatic visualization generated based on given data")
+
+                        # Show narrative if available
+                        if result_data.get("narrative"):
+                            st.subheader("Summary")
+                            st.info(result_data['narrative'])
+                    elif message["role"] == "assistant" and message.get("type") == "text_only":
+                        st.markdown(message["content"])
+                    else:
+                        st.write(message["content"])
+        col1, col2 = st.columns([3, 1])
         with col2:
-            if st.button("View Chat History", help="See what AI remembers"):
-                # Add a chat history request to trigger the response
-                st.session_state.chat_messages.append({"role": "user", "content": "Show chat history"})
-                st.rerun()
-        with col3:
             if st.button("Clear History", help="Clear conversation history"):
                 st.session_state.chat_messages = []
                 st.session_state.conversation_history = []
@@ -110,8 +127,21 @@ class NaturalLanguageQuery:
             return user_query
         return None
     
-    def add_assistant_response(self,response,result_data):
-        st.session_state.chat_messages.append({"role": "assistant", "content": response})
+    def add_assistant_response(self, response, result_data):
+        if result_data and result_data["type"] in ["developer_info", "unrelated_question", "chat_history"]:
+            st.session_state.chat_messages.append({
+                "role": "assistant", 
+                "content": result_data["content"],
+                "type": "text_only"
+            })
+        else:
+            st.session_state.chat_messages.append({
+                "role": "assistant", 
+                "content": response,
+                "result_data": result_data,
+                "type": "analysis"
+            })
+            
         with st.chat_message("assistant"):
             if result_data:
                 if result_data["type"] == "developer_info":
@@ -132,13 +162,13 @@ class NaturalLanguageQuery:
                     # if there is a visualization,  show
                     if result_data.get("visualization"):
                         st.subheader("Visualized Data")
-                        st.plotly_chart(result_data["visualization"], width='content')
+                        st.plotly_chart(result_data["visualization"], use_container_width=True)
                         st.caption("Automatic visualization generated based on given data")
 
                     # if there is a naration show that naration
                     if result_data.get("narrative"):
                         st.subheader("Summary")
-                        st.info({result_data['narrative']})
+                        st.info(result_data['narrative'])
     
     
     def _add_to_conversation_history(self, message, role):
@@ -333,7 +363,7 @@ class NaturalLanguageQuery:
     def _handle_chat_history_request(self):
         """Handle requests to view chat history"""
         # Build the chat history content
-        history_content = " **AI Memory & Chat History**\n\n"
+        history_content = "**AI Memory & Chat History**\n\n"
         
         # Recent conversation history
         if st.session_state.conversation_history:
@@ -357,7 +387,7 @@ class NaturalLanguageQuery:
         
         # Corrections remembered
         if st.session_state.context_memory['corrections']:
-            history_content += "### ❌ Corrections Remembered\n"
+            history_content += "### Corrections Remembered\n"
             for i, correction in enumerate(st.session_state.context_memory['corrections'][-5:], 1):
                 correction_preview = correction['correction'][:100] + ("..." if len(correction['correction']) > 100 else "")
                 history_content += f"{i}. {correction_preview}\n"
@@ -365,19 +395,19 @@ class NaturalLanguageQuery:
         
         # Previous analyses
         if st.session_state.context_memory['previous_analyses']:
-            history_content += "### 📊 Previous Analyses\n"
+            history_content += "###Previous Analyses\n"
             for i, analysis in enumerate(st.session_state.context_memory['previous_analyses'][-5:], 1):
                 query_preview = analysis['query'][:80] + ("..." if len(analysis['query']) > 80 else "")
                 history_content += f"{i}. **{analysis['result_type']}**: {query_preview}\n"
             history_content += "\n"
         
         # Summary stats
-        history_content += "### 📈 Memory Statistics\n"
+        history_content += "### Memory Statistics\n"
         history_content += f"- **Total Messages**: {len(st.session_state.conversation_history)}\n"
         history_content += f"- **Corrections Made**: {len(st.session_state.context_memory['corrections'])}\n"
         history_content += f"- **Analyses Performed**: {len(st.session_state.context_memory['previous_analyses'])}\n\n"
         
-        history_content += "💡 *This information helps me provide better, context-aware responses based on our conversation!*"
+        history_content += "*This information helps me provide better, context-aware responses based on our conversation!*"
         
         self._add_to_conversation_history(history_content, "assistant")
         
