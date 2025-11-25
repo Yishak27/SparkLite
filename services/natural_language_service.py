@@ -43,7 +43,7 @@ class NaturalLanguageQuery:
             with st.spinner("Executing analysis..."):
                 result, error = code_generation.execute_code(self,generated, df)
                 # print('code execution,', result, error)
-            formatted_result = code_generation.format_executed_code(self,result, error)
+            formatted_result = code_generation.format_executed_code(self,result, error,user_query, df)
             # print('formatttttt.........', formatted_result)
             return formatted_result,generated
         except Exception as e:
@@ -70,7 +70,12 @@ class NaturalLanguageQuery:
                 elif result_data["type"] in ["number", "text", "unknown"]:
                     st.info(result_data["content"])
 
+                # if there is a visualization,  show
                 if result_data.get("visualization"):
                     st.subheader("Visualized Data")
                     st.plotly_chart(result_data["visualization"], width='content')
                     st.caption("Automatic visualization generated based on your data")
+
+                # if there is a naration show that naration
+                if result_data.get("narrative"):
+                    st.info(f"Insight: {result_data['narrative']}")

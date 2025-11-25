@@ -41,5 +41,4 @@ class AICodeGenarator:
                 print("Error:", e)
                 print("Trying next key...")
                 self._rotate_key()
-        raise Exception("All Groq API keys failed")
-    
+        raise Exception("All Groq API keys failed")     
