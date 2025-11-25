@@ -22,6 +22,13 @@ class CodeGenerator:
         ais = AICodeGenarator()
         try:
             # Build context-aware prompt
+            # if the prompt is not about the sales, like developer information, use this data
+            developerInfo = {
+                "name":"Ermiyas Developer",
+                "website":"https://ermiyas.dev",
+                "email":"inbox@ermiyas.dev",
+                "about":"A software engineer that develop many system."
+            }
             context_info = ""
             if context and context.get('recent_messages'):
                 context_info += "\n\nPrevious conversation context:\n"

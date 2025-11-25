@@ -48,7 +48,6 @@ class NaturalLanguageQuery:
                 }
                 st.rerun()
         
-
     def get_dataframe_info(self, df):
         columns_info = []
         for col in df.columns:
@@ -58,9 +57,13 @@ class NaturalLanguageQuery:
 
     def process_user_request(self, user_query, df):
         try:
-
+            # Store the current query in conversation history
             self._add_to_conversation_history(user_query, "user")            
             self._detect_and_store_corrections(user_query)
+            
+            # Check if question is about developer instead of data
+            if self._is_developer_question(user_query):
+                return self._handle_developer_question(user_query), None
             
             code_generation = CodeGenerator
             df_info = self.get_dataframe_info(df)
@@ -103,24 +106,27 @@ class NaturalLanguageQuery:
         st.session_state.chat_messages.append({"role": "assistant", "content": response})
         with st.chat_message("assistant"):
             if result_data:
-                st.write(result_data["display"])                
-                if result_data["type"] == "dataframe":
-                    st.dataframe(result_data["content"])
-                elif result_data["type"] == "error":
-                    st.error(result_data["content"])
-                elif result_data["type"] in ["number", "text", "unknown"]:
-                    st.info(result_data["content"])
+                if result_data["type"] == "developer_info":
+                    st.markdown(result_data["content"])
+                else:
+                    st.write(result_data["display"])                
+                    if result_data["type"] == "dataframe":
+                        st.dataframe(result_data["content"])
+                    elif result_data["type"] == "error":
+                        st.error(result_data["content"])
+                    elif result_data["type"] in ["number", "text", "unknown"]:
+                        st.info(result_data["content"])
 
-                # if there is a visualization,  show
-                if result_data.get("visualization"):
-                    st.subheader("Visualized Data")
-                    st.plotly_chart(result_data["visualization"], width='content')
-                    st.caption("Automatic visualization generated based on given data")
+                    # if there is a visualization,  show
+                    if result_data.get("visualization"):
+                        st.subheader("Visualized Data")
+                        st.plotly_chart(result_data["visualization"], width='content')
+                        st.caption("Automatic visualization generated based on given data")
 
-                # if there is a naration show that naration
-                if result_data.get("narrative"):
-                    st.subheader("Summary")
-                    st.info({result_data['narrative']})
+                    # if there is a naration show that naration
+                    if result_data.get("narrative"):
+                        st.subheader("Summary")
+                        st.info({result_data['narrative']})
     
     
     def _add_to_conversation_history(self, message, role):
@@ -193,3 +199,47 @@ class NaturalLanguageQuery:
             
             if st.button("Close Memory View"):
                 st.rerun()
+    
+    def _is_developer_question(self, user_query):
+        developer_keywords = [
+            "developer", "who made", "who created", "who built", "creator", "Who develop you",
+            "who is the developer","who make you?","developer",
+            "author", "programmer", "engineer", "contact", "email", 
+            "website", "portfolio", "about you", "who are you", "your creator",
+            "made this", "built this", "developed this", "ermiyas","who build you?",
+            "who build this?","Who are you?","who create this?","who is the developer?",
+            "who is the creator?","creator","maker","build","software","engineer","who make this?"
+        ]
+        
+        query_lower = user_query.lower()
+        return any(keyword in query_lower for keyword in developer_keywords)
+    
+    def _handle_developer_question(self, user_query):
+        developer_info = {
+            "name": "Ermiyas Developer",
+            "website": "https://ermiyas.dev",
+            "email": "inbox@ermiyas.dev",
+            "about": "A software engineer that develops many systems."
+        }
+        
+        response_text = f"""
+        **About the Developer**
+        
+        This SparkLite AI system was created by **{developer_info['name']}**, a skilled software engineer who specializes in developing various systems and applications.
+        
+        **Contact**: {developer_info['email']}
+        **Website**: {developer_info['website']}
+        
+        For more information about the developer's work, projects, and expertise, please visit: **{developer_info['website']}**
+        
+        If you have questions about data analysis, feel free to ask about your uploaded data!
+        """
+        self._add_to_conversation_history(response_text, "assistant")
+        
+        return {
+            "type": "developer_info",
+            "content": response_text,
+            "display": response_text,
+            "visualization": None,
+            "narrative": None
+        }
