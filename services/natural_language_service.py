@@ -4,6 +4,7 @@ import pandas as pd
 import openai
 from dotenv import load_dotenv
 from .code_generator import CodeGenerator
+from .visualization import AutoVisualization
 
 load_dotenv()
 OPEN_API_KEY = os.getenv("OPEN_AI_KEY")
@@ -70,3 +71,6 @@ class NaturalLanguageQuery:
                 elif result_data["type"] in ["number", "text", "unknown"]:
                     st.info(result_data["content"])
 
+                if result_data.get("visualization"):
+                    st.plotly_chart(result_data["visualization"], use_container_width=True)
+                    st.caption("Automatic visualization generated based on your data")

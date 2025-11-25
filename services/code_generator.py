@@ -50,6 +50,7 @@ Important: Only output the code, no other text.
         except Exception as e:
             print('error in code generation, ', e)
             return "Unable to generate code."         
+  
     def execute_code(self, code,df):
         try:
             local_vars = {
@@ -81,6 +82,7 @@ Important: Only output the code, no other text.
         except Exception as e:
             print('execution code error,',e)
             return "Error on execution the code."
+  
     def format_executed_code(self, result, error):
         print('format code,', result, error)
         if error:
@@ -118,4 +120,4 @@ Important: Only output the code, no other text.
                 "type": "unknown",
                 "content": str(result),
                 "display": f"**Result:** {str(result)}"
-            }
+            }    
