@@ -6,7 +6,6 @@ import datetime
 from dotenv import load_dotenv
 from .code_generator import CodeGenerator
 from .visualization import AutoVisualization
-# from .loader import LoaderComponent
 
 load_dotenv()
 OPEN_API_KEY = os.getenv("OPEN_AI_KEY")
@@ -34,31 +33,56 @@ class NaturalLanguageQuery:
                 with st.chat_message(message["role"]):
                     if message["role"] == "assistant" and message.get("type") == "analysis" and message.get("result_data"):
                         result_data = message["result_data"]
-                        st.write(message["content"])
                         
-                        # Show generated code if available
-                        if result_data.get("generated_code"):
-                            with st.expander("View Generated Code"):
-                                st.code(result_data["generated_code"], language="python")
+                        expander_title = f"Analysis Results"
+                        if result_data.get("type"):
+                            expander_title += f" ({result_data['type'].title()})"
                         
-                        if result_data["type"] == "dataframe":
-                            st.dataframe(result_data["content"])
-                        elif result_data["type"] == "error":
-                            st.error(result_data["content"])
-                        elif result_data["type"] in ["number", "text", "unknown"]:
-                            st.info(result_data["content"])
+                        with st.expander(expander_title, expanded=True):
+                            st.write(message["content"])                            
+                            # Show generated code if available
+                            if result_data.get("generated_code"):
+                                with st.expander("View Generated Code"):
+                                    st.code(result_data["generated_code"], language="python")
+                            
+                            if result_data["type"] == "dataframe":
+                                st.dataframe(result_data["content"])
+                            elif result_data["type"] == "error":
+                                st.error(result_data["content"])
+                            elif result_data["type"] in ["number", "text", "unknown"]:
+                                st.info(result_data["content"])
 
-                        if result_data.get("visualization"):
-                            st.subheader("Visualized Data")
-                            st.plotly_chart(result_data["visualization"], use_container_width=True)
-                            st.caption("Automatic visualization generated based on given data")
+                            if result_data.get("visualization"):
+                                st.subheader("Visualized Data")
+                                st.plotly_chart(result_data["visualization"], use_container_width=True)
+                                st.caption("Automatic visualization generated based on given data")
 
-                        # Show narrative if available
-                        if result_data.get("narrative"):
-                            st.subheader("Summary")
-                            st.info(result_data['narrative'])
+                            # Show narrative if available
+                            if result_data.get("narrative"):
+                                st.subheader("Summary")
+                                st.info(result_data['narrative'])
                     elif message["role"] == "assistant" and message.get("type") == "text_only":
-                        st.markdown(message["content"])
+                        # Determine the expander title based on response type
+                        response_type = message.get("response_type", "")
+                        if response_type == "developer_info":
+                            expander_title = "Developer Information"
+                        elif response_type == "unrelated_question":
+                            expander_title = "Question Not Understood"
+                        elif response_type == "chat_history":
+                            expander_title = "Chat History & Memory"
+                        else:
+                            # Fallback to content detection for older messages
+                            if "About the Developer" in message["content"]:
+                                expander_title = "👨‍💻 Developer Information"
+                            elif "I don't understand the question" in message["content"]:
+                                expander_title = "Question Not Understood"
+                            elif "AI Memory & Chat History" in message["content"]:
+                                expander_title = "Chat History & Memory"
+                            else:
+                                expander_title = "Response"
+                        
+                        with st.expander(expander_title, expanded=True):
+                            st.markdown(message["content"])
                     else:
                         st.write(message["content"])
         col1, col2 = st.columns([3, 1])
@@ -137,7 +161,8 @@ class NaturalLanguageQuery:
             st.session_state.chat_messages.append({
                 "role": "assistant", 
                 "content": result_data["content"],
-                "type": "text_only"
+                "type": "text_only",
+                "response_type": result_data["type"]  # Store the specific response type
             })
         else:
             if generated_code and result_data:
@@ -153,30 +178,39 @@ class NaturalLanguageQuery:
         with st.chat_message("assistant"):
             if result_data:
                 if result_data["type"] == "developer_info":
-                    st.markdown(result_data["content"])
+                    with st.expander("👨‍💻 Developer Information", expanded=True):
+                        st.markdown(result_data["content"])
                 elif result_data["type"] == "unrelated_question":
-                    st.markdown(result_data["content"])
+                    with st.expander("Question Not Understood", expanded=True):
+                        st.markdown(result_data["content"])
                 elif result_data["type"] == "chat_history":
-                    st.markdown(result_data["content"])
+                    with st.expander("Chat History & Memory", expanded=True):
+                        st.markdown(result_data["content"])
                 else:
-                    st.write(result_data["display"])                
-                    if result_data["type"] == "dataframe":
-                        st.dataframe(result_data["content"])
-                    elif result_data["type"] == "error":
-                        st.error(result_data["content"])
-                    elif result_data["type"] in ["number", "text", "unknown"]:
-                        st.info(result_data["content"])
+                    
+                    expander_title = f"Analysis Results"
+                    if result_data.get("type"):
+                        expander_title += f" ({result_data['type'].title()})"
+                    
+                    with st.expander(expander_title, expanded=True):
+                        st.write(result_data["display"])                
+                        if result_data["type"] == "dataframe":
+                            st.dataframe(result_data["content"])
+                        elif result_data["type"] == "error":
+                            st.error(result_data["content"])
+                        elif result_data["type"] in ["number", "text", "unknown"]:
+                            st.info(result_data["content"])
 
-                    # if there is a visualization,  show
-                    if result_data.get("visualization"):
-                        st.subheader("Visualized Data")
-                        st.plotly_chart(result_data["visualization"], use_container_width=True)
-                        st.caption("Automatic visualization generated based on given data")
+                        # if there is a visualization,  show
+                        if result_data.get("visualization"):
+                            st.subheader("Visualized Data")
+                            st.plotly_chart(result_data["visualization"], use_container_width=True)
+                            st.caption("Automatic visualization generated based on given data")
 
-                    # if there is a naration show that naration
-                    if result_data.get("narrative"):
-                        st.subheader("Summary")
-                        st.info(result_data['narrative'])
+                        # if there is a naration show that naration
+                        if result_data.get("narrative"):
+                            st.subheader("Summary")
+                            st.info(result_data['narrative'])
     
     
     def _add_to_conversation_history(self, message, role):
@@ -325,7 +359,6 @@ class NaturalLanguageQuery:
         return True
     
     def _handle_unrelated_question(self, user_query):
-        """Handle questions that are not related to data analysis"""
         response_text = """
         **I don't understand the question**
         
