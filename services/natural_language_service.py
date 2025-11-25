@@ -208,7 +208,8 @@ class NaturalLanguageQuery:
             "website", "portfolio", "about you", "who are you", "your creator",
             "made this", "built this", "developed this", "ermiyas","who build you?",
             "who build this?","Who are you?","who create this?","who is the developer?",
-            "who is the creator?","creator","maker","build","software","engineer","who make this?"
+            "who is the creator?","creator","maker","build","software","engineer","who make this?",
+           "who are you?"
         ]
         
         query_lower = user_query.lower()
