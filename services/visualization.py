@@ -114,6 +114,27 @@ class AutoVisualization:
             fig = px.line(y=result.values, title=f"Trend of {result.name}")
         
         return fig
+    
     def _create_pie_chart(self, result):
-        return "pie chart"
+        if isinstance(result, pd.DataFrame):
+            numeric_cols = result.select_dtypes(include=['number']).columns
+            cat_cols = result.select_dtypes(include=['object', 'category']).columns
+            
+            if len(cat_cols) > 0 and len(numeric_cols) > 0:
+                names_col = cat_cols[0]
+                values_col = numeric_cols[0]
+                fig = px.pie(result, names=names_col, values=values_col, 
+                           title=f"Distribution of {values_col} by {names_col}")
+            else:
+                return None
+                
+        elif isinstance(result, pd.Series):
+            if result.dtype in ['object', 'category']:
+                value_counts = result.value_counts()
+                fig = px.pie(values=value_counts.values, names=value_counts.index,
+                           title=f"Distribution of {result.name}")
+            else:
+                fig = px.pie(values=result.values, names=result.index,
+                           title=f"Distribution of {result.name}")
+        return fig
     

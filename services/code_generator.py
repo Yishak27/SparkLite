@@ -89,7 +89,7 @@ Important: Only output the code, no other text.
             return {
                 "type": "error",
                 "content": error,
-                "display": f"Error* {error}"
+                "display": f"Error: {error}"
             } 
         visualization = AutoVisualization()
         visualization = visualization.create_visualization(result)
@@ -106,27 +106,27 @@ Important: Only output the code, no other text.
             return {
                 "type": "dataframe",
                 "content": result,
-                "display": "**Analysis Result (DataFrame):**",
+                "display": "Analysis Result (DataFrame): ",
                 "visualization": visualization
             }
         elif isinstance(result, (int, float)):
             return {
                 "type": "number",
                 "content": result,
-                # "display": f"Result* {result}",
+                "display": f"Result: ",
                 "visualization": None
             }
         elif isinstance(result, str):
             return {
                 "type": "text",
                 "content": result,
-                # "display": f"**Result:** {result}",
+                "display": f"Result:",
                 "visualization": None
             }
         else:
             return {
                 "type": "unknown",
                 "content": str(result),
-                # "display": f"**Result:** {str(result)}",
+                "display": f"Result:",
                 "visualization": visualization
             }    
