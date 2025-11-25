@@ -16,23 +16,48 @@ class CodeGenerator:
         self.client = openai.OpenAI(api_key=OPEN_API_KEY)
         
     def generate_code(self, user_query, df):
+        return self.generate_code_with_context(user_query, df, {})
+    
+    def generate_code_with_context(self, user_query, df, context=None):
         ais = AICodeGenarator()
         try:
+            # Build context-aware prompt
+            context_info = ""
+            if context and context.get('recent_messages'):
+                context_info += "\n\nPrevious conversation context:\n"
+                for msg in context['recent_messages'][-4:]:  # Last 4 messages
+                    context_info += f"{msg['role']}: {msg['content'][:200]}...\n"
+            
+            if context and context.get('corrections'):
+                context_info += "\n\nUser corrections from previous interactions:\n"
+                for correction in context['corrections']:
+                    context_info += f"- {correction['correction'][:150]}...\n"
+            
+            if context and context.get('previous_analyses'):
+                context_info += "\n\nPrevious analysis patterns:\n"
+                for analysis in context['previous_analyses'][-2:]:  # Last 2 analyses
+                    context_info += f"- Query: {analysis['query'][:100]}... (Type: {analysis['result_type']})\n"
+            
             prompt = f"""
-            You are an expert Data Analyst.
+            You are an expert Data Analyst with memory of previous conversations.
             You have access to a pandas dataframe variable named `df`.
             The dataframe has these columns: {df}
-            User Question: "{user_query}"
             
-                Instructions:
-1. Write Python code using pandas to answer the question.
-2. Assign the final result to a variable named `result`.
-3. Output ONLY the python code without any explanations.
-4. Use only these libraries: pandas, matplotlib, seaborn, plotly
-5. If you need to create a visualization, use plotly and assign to `fig`.
-6. Format: ```python\n# your code here\n```
+            {context_info}
+            
+            Current User Question: "{user_query}"
+            
+            Instructions:
+1. Consider the conversation history and any corrections the user has made
+2. Write Python code using pandas to answer the question
+3. If the user corrected you before, avoid making the same mistakes
+4. Assign the final result to a variable named `result`
+5. Output ONLY the python code without any explanations
+6. Use only these libraries: pandas, matplotlib, seaborn, plotly
+7. If you need to create a visualization, use plotly and assign to `fig`
+8. Format: ```python\n# your code here\n```
 
-Important: Only output the code, no other text.
+Important: Only output the code, no other text. Learn from previous corrections.
 
             """ 
             result = ais.safe_completion(
@@ -42,7 +67,7 @@ Important: Only output the code, no other text.
                 max_tokens=1024
             )
             
-            generated_code=  result.choices[0].message.content
+            generated_code = result.choices[0].message.content
             if "```python" in generated_code:
                 generated_code = generated_code.split("```python")[1].split("```")[0].strip()
             elif "```" in generated_code:

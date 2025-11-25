@@ -2,6 +2,7 @@ import os
 import streamlit as st
 import pandas as pd
 import openai
+import datetime
 from dotenv import load_dotenv
 from .code_generator import CodeGenerator
 from .visualization import AutoVisualization
@@ -14,16 +15,39 @@ GROK_API_KEYS = [k.strip() for k in GROK_API_KEY.split(",") if k.strip()]
 
 class NaturalLanguageQuery:  
     def __init__(self):
-         if 'chat_messages' not in st.session_state:
+        if 'chat_messages' not in st.session_state:
             st.session_state.chat_messages = []
+        if 'conversation_history' not in st.session_state:
+            st.session_state.conversation_history = []
+        if 'context_memory' not in st.session_state:
+            st.session_state.context_memory = {
+                'corrections': [],
+                'preferences': [],
+                'previous_analyses': []
+            }
             
     def display_chat_interface(self):
-        st.subheader("Ask Questions About the data")     
+        st.subheader("Ask Questions About the data")        
         if st.session_state.chat_messages is not None:
             for message in st.session_state.chat_messages:
                 with st.chat_message(message["role"]):
                     st.write(message["content"])
-
+            # Add  buttons to controll the chat history,,
+        col1, col2, col3 = st.columns([2, 1, 1])
+        with col2:
+            if st.button("View Chat History", help="See what AI remembers"):
+                self._show_memory_sidebar()
+        with col3:
+            if st.button("Clear History", help="Clear conversation history"):
+                st.session_state.chat_messages = []
+                st.session_state.conversation_history = []
+                st.session_state.context_memory = {
+                    'corrections': [],
+                    'preferences': [],
+                    'previous_analyses': []
+                }
+                st.rerun()
+        
 
     def get_dataframe_info(self, df):
         columns_info = []
@@ -32,23 +56,39 @@ class NaturalLanguageQuery:
             columns_info.append(f"{col} ({dtype})")
         return ", ".join(columns_info)
 
-    def process_user_request(self, user_query,df):
+    def process_user_request(self, user_query, df):
         try:
+
+            self._add_to_conversation_history(user_query, "user")            
+            self._detect_and_store_corrections(user_query)
+            
             code_generation = CodeGenerator
             df_info = self.get_dataframe_info(df)
+            
+            context = self._build_conversation_context()
+            
+            # Show context indicator if there's relevant history
+            if context['recent_messages'] or context['corrections'] or context['previous_analyses']:
+                st.info("Using conversation history to provide better results")
+            
             # with st.spinner("generating analysis code"):
-            generated = code_generation.generate_code(self,user_query,df_info)
+            generated = code_generation.generate_code_with_context(self, user_query, df_info, context)
             # print("generated", generated)
             with st.expander("View Generated Code"):
                 st.code(generated, language="python")
             with st.spinner("Executing analysis..."):
-                result, error = code_generation.execute_code(self,generated, df)
+                result, error = code_generation.execute_code(self, generated, df)
                 # print('code execution,', result, error)
-            formatted_result = code_generation.format_executed_code(self,result, error,user_query, df)
+            formatted_result = code_generation.format_executed_code(self, result, error, user_query, df)
+            
+            # Store the result in conversation history
+            self._add_to_conversation_history(formatted_result.get("display", "Analysis completed"), "assistant")
+            self._store_analysis_result(user_query, formatted_result, generated)
+            
             # print('formatttttt.........', formatted_result)
-            return formatted_result,generated
+            return formatted_result, generated
         except Exception as e:
-            print("error occur",e)
+            print("error occur", e)
 
     def get_user_query(self):
         user_query = st.chat_input("Ask a question about the data...")        
@@ -81,3 +121,75 @@ class NaturalLanguageQuery:
                 if result_data.get("narrative"):
                     st.subheader("Summary")
                     st.info({result_data['narrative']})
+    
+    
+    def _add_to_conversation_history(self, message, role):
+        """Add message to conversation history with timestamp"""
+        import datetime
+        st.session_state.conversation_history.append({
+            "role": role,
+            "content": message,
+            "timestamp": datetime.datetime.now().isoformat()
+        })
+        
+        # Keep only 20 messages, sience am using memory as adb
+        if len(st.session_state.conversation_history) > 20:
+            st.session_state.conversation_history = st.session_state.conversation_history[-20:]
+    
+    def _detect_and_store_corrections(self, user_query):
+        """Detect if user is providing corrections or feedback"""
+        correction_keywords = [
+            "wrong", "incorrect", "not right", "that's not", "actually", 
+            "correction", "fix", "mistake", "error", "should be", 
+            "instead", "rather", "no that's", "not what i meant"
+        ]
+        
+        query_lower = user_query.lower()
+        if any(keyword in query_lower for keyword in correction_keywords):
+            st.session_state.context_memory['corrections'].append({
+                "correction": user_query,
+                "timestamp": datetime.datetime.now().isoformat(),
+                "previous_context": st.session_state.conversation_history[-3:] if len(st.session_state.conversation_history) >= 3 else st.session_state.conversation_history
+            })
+    
+    def _build_conversation_context(self):
+        context = {
+            "recent_messages": st.session_state.conversation_history[-6:] if st.session_state.conversation_history else [],
+            "corrections": st.session_state.context_memory['corrections'][-3:] if st.session_state.context_memory['corrections'] else [],
+            "previous_analyses": st.session_state.context_memory['previous_analyses'][-3:] if st.session_state.context_memory['previous_analyses'] else []
+        }
+        return context
+    
+    def _store_analysis_result(self, query, result, code):
+        st.session_state.context_memory['previous_analyses'].append({
+            "query": query,
+            "result_type": result.get("type"),
+            "code": code,
+            "timestamp": datetime.datetime.now().isoformat()
+        })
+        
+        if len(st.session_state.context_memory['previous_analyses']) > 10:
+            st.session_state.context_memory['previous_analyses'] = st.session_state.context_memory['previous_analyses'][-10:]
+    
+    def _show_memory_sidebar(self):
+        with st.sidebar:
+            st.header("AI Memory")
+            
+            if st.session_state.conversation_history:
+                st.subheader("Recent Conversation")
+                for msg in st.session_state.conversation_history[-5:]:
+                    role_icon = "👤" if msg["role"] == "user" else "🤖"
+                    st.text(f"{role_icon} {msg['content'][:100]}...")
+            
+            if st.session_state.context_memory['corrections']:
+                st.subheader("Corrections Remembered")
+                for correction in st.session_state.context_memory['corrections'][-3:]:
+                    st.text(f"{correction['correction'][:80]}...")
+            
+            if st.session_state.context_memory['previous_analyses']:
+                st.subheader("Previous Analyses")
+                for analysis in st.session_state.context_memory['previous_analyses'][-3:]:
+                    st.text(f"{analysis['query'][:60]}... ({analysis['result_type']})")
+            
+            if st.button("Close Memory View"):
+                st.rerun()
