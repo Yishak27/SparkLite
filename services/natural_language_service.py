@@ -61,7 +61,6 @@ class NaturalLanguageQuery:
     def add_assistant_response(self,response,result_data):
         st.session_state.chat_messages.append({"role": "assistant", "content": response})
         with st.chat_message("assistant"):
-            # st.write(response)            
             if result_data:
                 st.write(result_data["display"])                
                 if result_data["type"] == "dataframe":
@@ -72,5 +71,6 @@ class NaturalLanguageQuery:
                     st.info(result_data["content"])
 
                 if result_data.get("visualization"):
-                    st.plotly_chart(result_data["visualization"], use_container_width=True)
+                    st.subheader("Visualized Data")
+                    st.plotly_chart(result_data["visualization"], width='content')
                     st.caption("Automatic visualization generated based on your data")

@@ -4,7 +4,7 @@ import pandas as pd
 import openai
 from dotenv import load_dotenv
 from .ai_generator  import AICodeGenarator
-
+from .visualization import AutoVisualization
 load_dotenv()
 
 OPEN_API_KEY = os.getenv("OPEN_AI_KEY")
@@ -91,33 +91,42 @@ Important: Only output the code, no other text.
                 "content": error,
                 "display": f"Error* {error}"
             } 
+        visualization = AutoVisualization()
+        visualization = visualization.create_visualization(result)
+        print('visualizations,', visualization)
+
         if result is None:
             return {
                 "type": "empty",
                 "content": None,
-                "display": "No result returned from the analysis."
+                "display": "No result returned from the analysis.",
+                "visualization": None
             }
         elif isinstance(result, pd.DataFrame):
             return {
                 "type": "dataframe",
                 "content": result,
-                "display": "**Analysis Result (DataFrame):**"
+                "display": "**Analysis Result (DataFrame):**",
+                "visualization": visualization
             }
         elif isinstance(result, (int, float)):
             return {
                 "type": "number",
                 "content": result,
-                "display": f"Result* {result}"
+                # "display": f"Result* {result}",
+                "visualization": None
             }
         elif isinstance(result, str):
             return {
                 "type": "text",
                 "content": result,
-                "display": f"**Result:** {result}"
+                # "display": f"**Result:** {result}",
+                "visualization": None
             }
         else:
             return {
                 "type": "unknown",
                 "content": str(result),
-                "display": f"**Result:** {str(result)}"
+                # "display": f"**Result:** {str(result)}",
+                "visualization": visualization
             }    
