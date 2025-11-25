@@ -73,7 +73,7 @@ class NaturalLanguageQuery:
                         else:
                             # Fallback to content detection for older messages
                             if "About the Developer" in message["content"]:
-                                expander_title = "👨‍💻 Developer Information"
+                                expander_title = "Developer Information"
                             elif "I don't understand the question" in message["content"]:
                                 expander_title = "Question Not Understood"
                             elif "AI Memory & Chat History" in message["content"]:
@@ -178,7 +178,7 @@ class NaturalLanguageQuery:
         with st.chat_message("assistant"):
             if result_data:
                 if result_data["type"] == "developer_info":
-                    with st.expander("👨‍💻 Developer Information", expanded=True):
+                    with st.expander(" Developer Information", expanded=True):
                         st.markdown(result_data["content"])
                 elif result_data["type"] == "unrelated_question":
                     with st.expander("Question Not Understood", expanded=True):
