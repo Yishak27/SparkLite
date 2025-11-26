@@ -1,5 +1,4 @@
 /sparkvenv
 */__pycache__
-.env
-*.md
-*_demo.md
+config.bat
+node_modules
