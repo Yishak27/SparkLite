@@ -1,5 +1,3 @@
 /sparkvenv
 */__pycache__
 .env
-*.md
-*_demo.md
